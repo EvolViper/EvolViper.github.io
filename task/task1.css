@@ -1,0 +1,105 @@
+
+nav {
+    background-color: mediumpurple;
+    
+}
+
+header ul {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 900px;
+}
+
+
+
+header li {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    line-height: 30px;
+}
+
+
+header a {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    text-decoration: none;
+    font-family: impact;
+    
+}
+
+header a:hover {
+    background-color: gainsboro;
+    color: gray;
+}
+
+ul.ul2 {
+    overflow: hidden;
+}
+
+ul.ul2 li {
+    display: block;
+    float: left;
+}
+
+ul.ul2 li:last-child {
+    float: right;
+}
+
+footer {
+    background-color: #fafafa;
+}
+
+.pager {
+    box-sizing: border-box;
+    height: 40px;
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 115px;
+    text-align: center;
+    
+}
+
+.pager a {
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin-top: 8px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 10px;
+    line-height: 24px;
+    color: #a13ad1;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+.pager a.text {
+    width: 70px;
+    border: none;
+    line-height: 26px;
+    
+}
+
+.pager a.active {
+    background-color: #a13ad1;
+    color: white;     
+    border-color: #a13ad1;
+}
+
+.pager span {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-top: 15px;
+    margin-right: 10px;
+    float: left;
+}

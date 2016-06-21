@@ -1,0 +1,275 @@
+.offers {
+    position: relative;
+    overflow: hidden;
+    min-width: 888px;
+    padding-left: 13%;
+    padding-right: 13%;
+    text-align: center;
+}
+
+.offers h2 {
+    margin-bottom: 11px;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 25px;
+    color: #40525c;
+    text-transform: uppercase;
+}
+
+.offers .price {
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    top: 50px;
+    width: 296px; 
+    min-height: 440px;
+    margin-bottom: 127px;
+    border: 1px solid #e8eaec;
+    border-radius: 4px;
+    font-family: Trebuchet;
+    text-align: center;
+}
+
+.offers .price header {
+    box-sizing: border-box;
+    height: 63px;
+    margin: 0;
+    margin-bottom: -3px;
+    background-color: #ee8129;
+    font-family: FuturaBT;
+    font-size: 24px;
+    line-height: 68px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+}
+
+.offers .price h2 {
+    margin: 0;
+    margin-bottom: -13px;
+    padding: 0;
+    font-family: FuturaBT;
+    line-height: 68px;
+    font-size: 24px;
+    text-transform: uppercase;
+    line-height: 68px;
+    
+}
+
+.offers .price header p {
+    margin: 0;
+}
+
+.offers .price p.monthly {
+    margin: 0;
+    margin-bottom: 25px;
+    font-family: Trebuchet;
+    font-size: 72px;
+    font-weight: 700;
+    
+}
+
+.offers .price2 p.monthly sup {
+    font-size: 36px;
+}
+
+.offers .price p.monthly sub {
+    font-size: 18px;
+}
+
+.offers .price ul {
+    margin: 0;
+    margin-bottom: 18px;
+    padding-left: 14px;
+    padding-right: 14px;
+    list-style: none;
+    font-family: Trebuchet;
+    
+}
+
+.offers .price ul li {
+    position: relative;
+    margin-bottom: 1px;
+    padding: 7px;
+    padding-left: 65px;
+    background-color: #edf5fd;
+    font-family: Calibri;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: left;
+    color: #888c94;
+}
+
+.offers .price ul li:nth-child(2n) {
+    margin-bottom: 1px;
+    background-color: #f5f5f6;
+}
+
+.offers .price ul li::before {
+    display: inline-block;
+    width: 13px;
+    height: 15px;
+    content: "";
+    vertical-align: middle;
+    position: absolute;
+    left: 33px;
+    
+    background-image: url(images/check.png);
+}
+
+.offers a.button {
+    display: block;
+    margin-top: 10px;
+    margin-left: 19px;
+    margin-right: 19px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    background-color: #3070a8;
+    box-shadow: 0 3px #13426b;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.offers .block1 {
+    margin-right: -10px;
+}
+
+.offers .block1 header {
+    background-color: #2bc2d5;
+}
+
+.offers .block2 {
+    position: relative;
+    z-index: 100;
+    min-height: 468px;
+    margin-right: -10px;
+    border: 4px solid #ee8129;
+    box-shadow: 0 0 4px #0874b2;
+}
+
+.offers .block2 a {
+    box-shadow: 0 3px #b3560b;
+    background-color: #ee8129;
+}
+
+.offers .block2 header {
+    height: 73px;
+}
+
+.offers .block3 header {
+    background-color: #00b89a;
+}
+
+.offers .block1 header, .block3 header {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.client-says {
+    clear: both;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 64px;
+    padding-right: 13%;
+    padding-left: 13%;
+    padding-bottom: 59px;
+    background-color: #0b1218;
+    background-image: url(images/background.jpg);
+    font-family: "Trebuchet MS";
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.client-says .client-says-content {
+    min-width: 1050px;
+}
+
+.client-says h2 {
+    margin: 0;
+    margin-bottom: 54px;
+    padding: 0;
+    text-align: center;
+    color: #3170a8;
+    font-size: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+    
+}
+
+.client-says h2 span {
+    color: #ee8129;
+}
+
+article.review  {
+    display: inline-block;
+    width: 490px;
+    margin-right: 43px;
+    margin-bottom: 15px;
+    
+}
+
+article.review img {
+    margin-right: 25px;
+}
+
+article.review:nth-of-type(2n) {
+    margin-right: 0;
+}
+
+.customer-text {
+    width: 333px;
+    float: right;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    padding-left: 13px;
+    padding-right: 19px;
+    background-color: white;
+    text-align: left;
+}
+
+.customer-text::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 33px;
+    left: -17px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16px 23px 16px 0;
+    border-color: transparent white transparent transparent;    
+}
+
+.customer-text span {
+    font-style: italic;
+    color: #3070a8;
+}
+
+.customer-text span.customer {
+    float: right;
+}
+
+.customer-text q {
+    color: #666666;
+}
+
+.customer-text hr {
+    border: 0 none;
+    border-top: 2px dotted #322f32;
+    background: none;
+    height: 0;
+}
+
+.customer-text q:before, q:after {
+ content: "";
+}

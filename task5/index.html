@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Photo Gallery</title>
+    </head>
+    <body>
+        <section class="gallery">
+            <div class="gallery-overlay"></div>
+            <h1>Showcase your work like a pro.</h1>
+            <p class="subheading">Contact me if you like my work</p>
+            <div class="photo-block">
+                <article class="photo block-1">
+                    <img src="images/photo-1.jpg" alt="Image in gallery" width="360" height="260">
+                    <div class="hover-overlay">
+                        <a href="" class="resize"></a>
+                        <a href="" class="link"></a>
+                    </div>
+                </article>
+                <article class="photo block-2">
+                    <img src="images/photo-2.jpg" alt="Image in gallery" width="360" height="260">
+                    <div class="hover-overlay">
+                        <a href="" class="resize"></a>
+                        <a href="" class="link"></a>
+                    </div>
+                </article>
+                <article class="photo block-3">
+                    <img src="images/photo-3.jpg" alt="Image in gallery" width="360" height="260">
+                    <div class="hover-overlay">
+                        <a href="" class="resize"></a>
+                        <a href="" class="link"></a>
+                    </div>
+                </article>
+                <article class="photo block-4">
+                    <img src="images/photo-4.jpg" alt="Image in gallery" width="360" height="260">
+                    <div class="hover-overlay">
+                        <a href="" class="resize"></a>
+                        <a href="" class="link"></a>
+                    </div>
+                </article>
+                <article class="photo block-5">
+                    <img src="images/photo-5.jpg" alt="Image in gallery" width="360" height="260">
+                    <div class="hover-overlay">
+                        <a href="" class="resize"></a>
+                        <a href="" class="link"></a>
+                    </div>
+                </article>
+                <article class="photo block-6">
+                    <img src="images/photo-6.jpg" alt="Image in gallery" width="360" height="260">
+                    <div class="hover-overlay">
+                        <a href="" class="resize"></a>
+                        <a href="" class="link"></a>
+                    </div>
+                </article> 
+                <div class="show-image">
+                    <a href="#" class="close-image"></a>
+                </div>  
+            </div>  
+        </section>
+        <script>
+            var scrollPosition;
+            function displayImage(event) {
+                event.preventDefault();
+                scrollPosition = document.body.scrollTop;
+                //alert(scrollPosition);
+                document.querySelector(".show-image").style.display="block";
+                document.querySelector(".gallery-overlay").style.display="block";
+                scroll(0, 0);
+            }
+            function closeImage(event) {
+                event.preventDefault();
+                document.querySelector(".show-image").style.display="none";
+                document.querySelector(".gallery-overlay").style.display="none";
+                scroll(0, scrollPosition);
+            }
+            var magnifierButtons = document.querySelectorAll(".resize");
+            for (var i = 0; i < magnifierButtons.length; i++) {
+                magnifierButtons[i].addEventListener('click', displayImage);
+            }
+            var closeButton = document.querySelector(".close-image");
+            closeButton.addEventListener("click", closeImage);
+        </script>
+    </body>
+</html>

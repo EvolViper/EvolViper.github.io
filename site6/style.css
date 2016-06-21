@@ -1,0 +1,52 @@
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 800px;
+    background-color: #1f262e;
+    background-image: url(images/background.jpg);
+    font-family: Lato;
+    background-position: 50% 43%;
+    background-size: cover;
+    color: white;
+}
+
+.slider:after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: -70px;
+    bottom: -80px;
+    width: 755px;
+    height: 682px;
+    transform: rotate(-7deg);
+    background-image: url(images/smartphone.png);
+    background-position: 0px 0px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+.slider header.main {
+    overflow: hidden;
+    padding-left: 10.5%;
+    padding-right: 10.5%;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: "Droid Sans";
+    font-size: 13px;
+}
+
+.slider .main-menu ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+.slider .main-menu ul li {
+    display: inline-block;
+}
+
+.slider .main-menu ul a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}

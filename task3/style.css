@@ -1,0 +1,100 @@
+body {
+    margin: auto;
+}
+
+.search-line {
+    max-width: 545px;
+    margin: auto;
+    padding: 40px;
+    padding-top: 30vh;
+}
+
+.search-line .search {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 54px;
+    white-space: nowrap;
+    margin-bottom: 50px;
+    padding-top: 5px;
+    padding-left: 4px;
+    padding-right: 90px;
+    background-color: #ffce5d;
+}
+
+.search-line .search input[type="text"] {
+    width: 100%;
+    height: 20px;
+    border-top: 2px solid #a3a3a3;
+    border-right: 1px solid #a3a3a3;
+    border-left: 1px solid #a3a3a3;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.search-line .search .sites-checkbox {
+    position: absolute;
+    top: 29px;
+    left: 0 ;
+}
+
+.search-line .search input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.search-line .search input[type="submit"] {
+    width: 68px;
+    min-width: 50px;
+    height: 27px;
+    border: 1px solid #998049;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, #ffffff, #cccccc);
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-line .first::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -40px;
+    content: "";
+    border: 27px solid transparent;
+    border-left: 13px solid #ffce5d;
+}
+
+.second {
+    position: relative;
+    background: -webkit-linear-gradient(#ffcd46, #edbc40);
+    background: -o-linear-gradient(#ffcd46, #edbc40);
+    background: linear-gradient(#ffcd46, #edbc40);
+}
+
+.second .suggest {
+    position: absolute;
+    top: 30px;
+    left: 5px;
+}
+
+.second .dotted-underline {
+    border-bottom: 1px dotted black;
+    cursor: pointer;
+}
+
+.search-line .second::after {
+    display: block;
+    content: "";
+    position: absolute;
+    /*top: 12px;
+    left: 530px*/;
+    top: 12px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    transform: rotate(45deg) skew(15deg, 15deg);
+    background: linear-gradient(to bottom, #ffcd46, #edbc40);
+    z-index: -2;
+    
+}

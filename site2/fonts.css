@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "AvantGarde-Book";
+    src: url(fonts/avantgarde-book-bold.otf);
+}
+
+@font-face {
+    font-family: "BauerBodni BT Bold";
+    src: url(fonts/BAUBODB.otf);
+}
+
+@font-face {
+    font-family: "AvantGarde-Demi Regular";
+    src: url(fonts/avantgarde-demi.otf);
+}

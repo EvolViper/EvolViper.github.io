@@ -1,0 +1,284 @@
+.wrapper {
+    border: 1px solid #eaeaea;
+    margin-bottom: 34px;
+    padding-bottom: 0;
+}
+
+.wrapper:after {
+    background-image: none;
+    width: 934px;
+    height: 1px;
+    left: 20px;
+    bottom: -21px;
+    background-color: #e1e1e1;
+    border-bottom: 2px solid #f3f3f3;
+}
+
+.main-header {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 18px;
+    box-shadow: 0 1px 2px -3px rgba(0, 0, 0, 0.5); 
+    margin-bottom: 0;
+}
+
+.contact {
+    overflow: hidden;
+    padding-bottom: 0;
+    font-size: 12px;
+    line-height: 20px;
+    color: #444444;
+}
+
+.contact h2 {
+    position: relative;
+    margin: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e5e5;
+    font-family: Oxygen;
+    font-size: 20px;
+    font-weight: 400;
+    color: #bbbbbb;
+    text-transform: uppercase;
+}
+
+.contact h2:after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    height: 11px;
+    background-color: red;
+    background: linear-gradient(to top, #fafafa, #fefefe);
+}
+
+.contact h2:before {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #f7f7f7;
+}
+
+.contact h3.second-heading {
+    position: relative;
+    -margin-right: 20px;
+    margin-bottom: 22px;
+    padding-left: 1px;
+    padding-bottom: 15px;
+    font-family: Oxygen;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -0.2px;
+    color: #222222;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 2px 2px -3px; rgba(0, 0, 0, 0.5);
+}
+
+.contact h3.second-heading:before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 50px;
+    bottom: -6px;
+    width: 7px;
+    height: 7px;
+    background-color: white;
+    border-bottom: 2px solid #e5e5e5;
+    border-right: 2px solid #e5e5e5;
+    transform: rotate(45deg);
+}
+
+
+.contact .form-container {
+    width: 592px;
+    overflow: hidden;
+    float: left;
+    padding-bottom: 70px;
+    padding-left: 1px;
+    padding-right: 20px;
+    border-right: 1px solid #e5e5e5;
+}
+
+.contact .form-container form {
+    font-size: 12px;
+    
+}
+
+.contact .form-container form p {
+    position: relative;
+    margin-bottom: 19px;
+    padding-top: 1px;
+    padding-left: 5px;
+}
+
+.contact .form-container form label {
+    position: relative;
+}
+
+.contact .form-container form input {
+    position: absolute;
+    left: 114px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 155px;
+    height: 25px;
+    border: none;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    background-image: url(images/input-background.png);
+    background-position: center;
+}
+
+.contact .form-container form input:valid {
+    box-shadow: none;
+    border: 1px solid #cae28b;
+}
+
+.contact .form-container form input:valid + label:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 273px;
+    width: 14px;
+    height: 14px;
+    background-color: #c4dd83;
+    background-image: url(images/ok.png);
+    background-repeat: no-repeat;
+    background-position: 3px 2.5px;
+    border-radius: 100%;
+}
+
+.contact .form-container form input[type="email"]:invalid + label:after {
+    display: block;
+    box-sizing: border-box;
+    content: "something wrong with your email";
+    position: absolute;
+    top: -3px;
+    left: 277px;
+    width: 180px;
+    height: 24px;
+    padding-left: 10px;
+    background-color: #ecb0b0;
+    border-radius: 2px;
+    font-family: Arial;
+    font-size: 11px;
+    line-height: 22px;
+    letter-spacing: 0;
+    color: #ac4040;
+    text-shadow: 1px 0px 1px rgba(255, 255, 255, 0.5);
+}
+
+.contact .form-container form input[type="email"]:invalid + label:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 275px;
+    width: 5px;
+    height: 5px;
+    background-color: #ecb0b0;
+    transform: rotate(45deg);
+}
+
+.contact .form-container form input:invalid {
+    box-shadow: none;
+    border: 1px solid #ecb0b0;
+}
+
+.contact .form-container form input[type="submit"] {
+    width: 134px;
+    height: 32px;
+    position: static;
+    margin-left: 113px;
+    background-image: none;
+    background: linear-gradient(to bottom, #ffc351, #ffb941);
+    border: 1px solid #efac3d;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    line-height: 18px;
+    color: white;
+    text-shadow: -1px 0 0 rgba(208, 139, 18, 0.5);
+}
+
+.contact .form-container form textarea {
+    display: inline-block;
+    vertical-align: top;
+    resize: none;
+    position: relative;
+    left: 28px;
+    width: 474px;
+    height: 175px;
+    margin-bottom: -8px;
+    border: none;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+}
+
+.contact .contact-information {
+    overflow: hidden;
+    float: left;
+    width: 286px;
+    margin-top: 20px;
+    margin-left: 19px;
+    padding-left: 11px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+   
+}
+
+.contact .contact-information h3 {
+    margin: 0;
+    padding: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 12px;
+    color: #666666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.main-footer {
+    position: relative;
+    overflow: visible;
+    clear: both;
+    box-sizing: border-box;
+    width: 974px;
+    margin: auto;
+    padding-top: 19px;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-bottom: 2px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+    box-shadow: 0 0 1px rgba(235, 235, 235, 1);
+}
+
+.main-footer:before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -19px;
+    width: 100%;
+    height: 19px;
+    background-image: url(images/wrapper-shadow.png);
+    background-repeat: no-repeat;
+}
+
+.main-footer:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+.main-footer .links:nth-child(2) {
+   margin-right: 56px;
+}

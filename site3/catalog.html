@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="fonts.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="catalog.css">
+        <title>Студия NЁRDS</title>
+    </head>
+    <body>
+        <header class="main catalog">
+            <div class="container">
+                <a href="index.html"><img src="img/logo.png" alt="Логотип"></a>
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="#">Студия</a></li>
+                        <li><a href="#">Клиенты</a></li>
+                        <li class="current">Магазин</li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                    <a class="cart" href="#">Корзина</a>
+                </nav>
+                <h1>Добро пожаловать в магазин готовых макетов</h1>
+            </div>
+        </header>
+        <main class="container">
+            <form class="parameters" action="#" method="GET">
+                <fieldset class="cost">
+                    <legend class="price-template">Стоимость:</legend>
+                    <div class="cost-filter">
+                        <div class="range">
+                            <div class="range-filter">
+                                <div class="bar" style="width: 70%;"></div>
+                            </div>
+                            <div class="toggle-min"></div>
+                            <div class="toggle-max"></div>
+                        </div>
+                        <label for="from-cost">От</label>
+                        <input class="first-input" id="from-cost" type="text" value="0">
+                        <label for="to-cost">До</label>
+                        <input class="second-input" id="to-cost" type="text" value="15000">
+                    </div>
+                </fieldset>
+                <fieldset class="grid">
+                    <legend class="grid-legend">Сетка:</legend>
+                    <p><input id="radio-grid-1" type="radio" name="radio-grid" value="adaptive" checked="checked"><label for="radio-grid-1">Адаптивная</label></p>
+                    <p><input id="radio-grid-2" type="radio" name="radio-grid" value="fixed"><label for="radio-grid-2">Фиксированная</label></p>
+                    <p><input id="radio-grid-3" type="radio" name="radio-grid" value="rubber"><label for="radio-grid-3">Резиновая</label></p>
+                </fieldset>
+                <fieldset class="features">
+                    <legend>Особенности:</legend>
+                    <p><input id="checkbox-1" type="checkbox" name="check-features" value="slider" checked="checked"><label for="checkbox-1">Слайдер</label></p>
+                    <p><input id="checkbox-2" type="checkbox" name="check-features" value="features"><label for="checkbox-2">Блок преимуществ</label></p>
+                    <p><input id="checkbox-3" type="checkbox" name="check-features" value="slider" checked="checked"><label for="checkbox-3">Новости</label></p>
+                    <p><input id="checkbox-4" type="checkbox" name="check-features" value="slider"><label for="checkbox-4">Галерея</label></p>
+                    <p><input id="checkbox-5" type="checkbox" name="check-features" value="slider"><label for="checkbox-5">Корзина</label></p>
+                </fieldset>
+                <button type="submit" class="show-selected">ПОКАЗАТЬ</button>
+            </form>
+            <div class="items">
+                <div class="sort-items">
+                    <ul class="sort">
+                        <li>сортировать:</li>
+                        <li><a href="#">по цене</a></li>
+                        <li><a href="#">по типу</a></li>
+                        <li><a href="#">по функционалу</a></li>
+                    </ul>
+                    <div class="sort-buttons">
+                        <a class="sort-button-down" href="#"></a>
+                        <a class="sort-button-up" href="#"></a>
+                    </div>
+                </div>
+                <article class="template-1">
+                    <header>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                    </header>
+                    <img src="img/aviator.jpg">
+                    <div class="hover-item">
+                        <h2>Aviator</h2>
+                        <p>Одностраничный макет с авторским дизайном</p>
+                        <a class="price" href="#">8000 Р.</a>
+                    </div>
+                </article>
+                <article class="template-2">
+                    <header>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                    </header>
+                    <img src="img/sunset.jpg">
+                    <div class="hover-item">
+                        <h2>Sunset</h2>
+                        <p>Интернет-магазин с личным кабинетом</p>
+                        <a class="price" href="#">10000 Р.</a>
+                    </div>
+                </article>
+                <article class="template-3">
+                    <header>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                    </header>
+                    <img src="img/forte.jpg">
+                    <div class="hover-item">
+                        <h2>Forte</h2>
+                        <p>Отличный макет для личного блога</p>
+                        <a class="price" href="#">5000 Р.</a>
+                    </div>
+                </article>
+                <article class="template-4">
+                    <header>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                    </header>
+                    <img src="img/marquee.jpg">
+                    <div class="hover-item">
+                        <h2>Modern organic thai</h2>
+                        <p>Сайт для ресторана быстрого питания</p>
+                        <a class="price" href="#">12000 Р.</a>
+                    </div>
+                </article>
+                <article class="template-5">
+                    <header>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                    </header>
+                    <img src="img/avenue.jpg">
+                    <div class="hover-item">
+                        <h2>Avenue</h2>
+                        <p>Макет для блога о путешествиях</p>
+                        <a class="price" href="#">8000 Р.</a>
+                    </div>
+                </article>
+                <article class="template-6">
+                    <header>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                    </header>
+                    <img src="img/dovetail.jpg">
+                    <div class="hover-item">
+                        <h2>Dovetail</h2>
+                        <p>Интернет-магазин с галереей товаров</p>
+                        <a class="price" href="#">14000 Р.</a>
+                    </div>
+                </article>
+            </div>
+            <div class="page-buttons">
+                <a href="#" class="current-page">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#" class="next-page">СЛЕДУЮЩАЯ</a>
+            </div>
+        </main>
+        <footer class="main-page">
+            <section class="map">
+                <div class="google-map" id="map-id">
+                </div>
+                <div class="some-div container">
+                    <div class="adress">
+                        <h4>NЁRDS DESIGN STUDIO</h4>
+                        <p>191186, Санкт-Петербург,<br> 
+                        ул. Б. Конюшенная, д. 19/8<p>
+                        <p class="phone">тел. +7 (812) 275-75-75</p>
+                        <a class="write-to-us" href="#">НАПИШИТЕ НАМ</a>
+                    </div>
+                </div>
+            </section>
+            <section class="social container">
+                <div class="soc-buttons">
+                    <a class="round-button vk" href="#">VK</a>
+                    <a class="round-button fb" href="#">FB</a>
+                    <a class="round-button ig" href="#">IG</a>
+                </div>
+                <div class="be-friends">
+                    <b>Давайте дружить, это выгодно!</b>
+                    <p>Скидка 10% для друзей из социальных сетей.</p>
+                </div>
+            </section> 
+            <div class="block-page"></div>
+            <div class="message-popup" id="popup">
+                <form>
+                    <label class="name">
+                        <p>Ваше имя:</p>
+                         <input type="text" name="username" placeholder="Представьтесь, пожалуйста">
+                    </label>
+                    <label class="mail"><p>Ваш e-mail:</p>
+                    <input type="email" name="usermail" placeholder="Для отправки ответа">
+                    </label>
+                    <label class="letter">
+                        <p>Текст письма:</p>
+                        <textarea name="letter-text" placeholder="В свободной форме"></textarea>
+                    </label>
+                    <button type="submit">ОТПРАВИТЬ</button>
+                    <button type="button" class="close"></button>
+                </form>
+            </div>
+        </footer>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+        <script src="js/script.js"></script>
+        <script src="js/catalog.js"></script>
+    </body>
+</html>

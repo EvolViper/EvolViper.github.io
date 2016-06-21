@@ -1,0 +1,569 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+   
+}
+
+body {
+    width: 898px;
+    margin: 0 auto;
+    
+    
+}
+
+.wrapper {
+    background-image: url(img/bg.jpg);
+    background-repeat: repeat-x;
+    border-top: 2px solid #b1b1b1;
+    
+}
+
+.line {
+    background-color: #2f2f2f;
+    font: 12.5px Arial;
+    line-height: 23px;
+    color: #a09f9f;
+    text-align: right;
+    height: 23px;
+    padding-right: 45px;
+    border-bottom: 2px solid black;
+    margin-bottom: 2px;
+}
+
+.blue {
+    color: #04a0f0;
+}
+
+h1 {
+    display: block;
+    
+    height: 69px;
+    padding-left: 47px;
+}
+
+h1 a {
+    text-decoration: none;
+    font: bold 31.25px/69px "AvantGarde-Book";
+    color: #6f6f6f;
+}
+
+nav {
+    background: #ebebea;
+    background: linear-gradient(to bottom, #e1e1e0, #f1f2f2);
+    height: 43px;
+    margin-left: 47px;
+    margin-right: 47px;
+    margin-bottom: 6px;
+    border-radius: 25px;
+
+}
+
+nav li {
+    display: block;
+    float: left;
+    border: 2p solid #c4c5c5;
+    
+}
+
+nav li a {
+    display: block;
+    margin-top: 13px;
+    text-align: center;
+    border-right: 1px solid #c8c9c9;
+    height: 15px;
+    width: 100px;
+    text-decoration: none;
+    font: bold 11.46px Arial;
+    color: #242424;
+    
+}
+
+nav li a:hover {
+    background: linear-gradient(to top, #1f80c7, #3baedd);
+    border-radius: 25px;   
+    border: 1px solid #005796;
+    height: 29px;
+    color: white;
+    line-height: 27px;
+    margin-top: 6px;
+}
+
+a.select {
+    width: 72px;
+    background: linear-gradient(to top, #1f80c7, #3baedd);
+    height: 29px;
+    border-radius: 25px;
+    border: 1px solid #005796;
+    color: white;
+    line-height: 27px;
+    margin-top: 6px;
+    margin-left: 10px;
+}
+
+nav ul li:nth-child(6) a {
+    border-right: none;
+}
+
+nav li input {
+    width: 198px;
+    height: 24px;
+    margin-top: 12px;
+    border-radius: 25px;
+    border-bottom: 1px solid #d4d6d5;
+    border-top: 2px solid #e0e0e0;
+    border-left: 2px solid #e0e0e0;
+    padding-left: 5px;
+    
+}
+
+nav li input[type="submit"] {
+    background: url(img/arrow.png), linear-gradient(to top, #1f80c7, #3baedd);
+    background-repeat: no-repeat;
+    background-position: 60% 50%;
+    border: 1px solid #075184;
+    border-radius: 100px;
+    height: 24px;
+    width: 24px;
+    font-size: 0;
+    position: relative;
+    bottom: 5px;
+    right: 24px;
+} 
+
+.big-block {
+    clear: both;
+}
+
+.left {
+    margin-left: 58px;
+    margin-right: 10px;
+    height: 276px;
+    width: 240px;
+    background: linear-gradient(to bottom right, #50c6e4, #39a2d5);
+    border: 2px solid #0096cf;
+    border-radius: 23px 0 0 23px;
+    float: left;
+    padding-top: 100px;
+    
+    
+}
+
+.left button {
+    width: 12px;
+    height: 12px;
+    border-radius: 100px;
+    background-color: #84d2e9;
+    border: 1px solid #205975;
+    position: relative;
+    left: 190px;
+    top: 65px;
+}
+
+.left button.select {
+    background-color: #2b2a2a;
+    border: 1px solid #92cce8;
+}
+
+button.nonSelect {
+    width: 12px;
+    height: 12px;
+    border-radius: 100px;
+    background-color: #84d2e9;
+    border: 1px solid #205975;
+    position: relative;
+    left: 190px;
+    top: 65px;
+    
+}
+
+.left button:hover {
+    
+    background-color: #2b2a2a;
+    border: 1px solid #92cce8;
+    
+}
+
+.left p {
+    text-align: right;
+    font: 33.33px/37.5px "BauerBodni BT Bold";
+    color: white;
+    text-transform: uppercase;
+}
+
+.left .second-line {
+    font-size: 43.75px;
+}
+
+.right {
+    background-color: red;
+    background: url(http://i.imgur.com/JAtjI0V.jpg);
+    height: 276px;
+    background-repeat: no-repeat;
+    background-position: 180px center;
+    margin-left: 120px;
+    margin-right: 58px;
+    border-radius: 0 23px 23px 0;
+    padding-top: 12px;
+}
+
+.right p {
+    text-align: right;
+    
+}
+
+.right .start {
+    font: 35.55px/20.44px "BauerBodni BT Bold";
+    margin-right: 91px;
+    
+}
+
+.right .doing {
+    font: 19.14px/20.44px "BauerBodni BT Bold";
+    color: #424343;
+    margin-right: 40px;
+}
+
+.right .on {
+    font: 19.14px/20.44px "BauerBodni BT Bold";
+    color: #424343;
+    margin-right: 102px;
+}
+
+.right .internet {
+    font: 19.14px/20.44px "BauerBodni BT Bold";
+    color: #006393;
+    margin-right: 56px;
+    text-transform: uppercase;
+}
+
+.main {
+    clear: both;
+    background-color: white;
+    margin: 0 58px;
+    border-radius: 23px;
+    height: 718px;
+    position: relative;
+}
+
+.services {
+    margin-left: 10px;
+    padding-top: 8px;
+}
+
+.block {
+    float: left;
+    height: 238px;       
+    width: 187px;
+    border: 1px solid #bfbfbf;
+    border-radius: 6px;
+    margin-left: 3px;
+    background-position: center 10px;
+    background-repeat: no-repeat;
+    padding-top: 63px;
+}
+
+.block.support {
+    background-image: url(img/support.png), url(img/bg-block.png);
+    background-position: center 10px, top right;
+    background-repeat: no-repeat;
+    
+}
+
+.block.ideas {
+    background-image: url(img/ideas.png), url(img/bg-block.png);
+    background-position: center 10px, top right;
+    background-repeat: no-repeat;;
+    
+}
+
+.block.service {
+    background-image: url(img/service.png), url(img/bg-block.png);
+    background-position: center 10px, top right;
+    background-repeat: no-repeat;
+    
+}
+
+.block.research {
+    background-image: url(img/research.png), url(img/bg-block.png);
+    background-position: center 10px, top right;
+    background-repeat: no-repeat;
+    
+}
+
+.block h2 {
+    text-align: center;
+    font: 14.58px/16.67px "AvantGarde-Demi Regular";
+    text-transform: uppercase;
+    color: #525050;
+    margin-bottom: 11px;
+}
+
+.block h2 .second-line {
+    color: black;
+}
+
+.block li {
+    font: 10.42px/16.67px Arial;
+    color: #525050;
+    margin-left: 34px;
+    
+}
+
+.block a {
+    display: block;
+    background: linear-gradient(to bottom, #f6f6f7, #bcbbbb);
+    width: 78px;
+    height: 28px;
+    border: 1px solid #a4a4a4;
+    border-radius: 12px;
+    text-decoration: none;
+    font: 12.5px/16.67px Arial;
+    color: black;
+    line-height: 24px;
+    text-align: center;
+    margin-left: 54px;
+    margin-top: 15px;
+}
+
+aside {
+    
+    float: left;
+    padding-left: 9px;
+    margin-right: 40px;
+    
+}
+
+aside h2 {
+    font: 18.75px/16.67px "AvantGarde-Book";
+    margin-top: 35px;
+    margin-bottom: 12px;
+    margin-left: 20px;
+    color: #101010;
+    
+}
+
+aside ul {
+
+margin-bottom: 45px;
+    
+}
+
+aside li {
+    margin-bottom: 9px;
+    margin-left: 32px;
+    color: #2888db;    
+}
+aside a {
+    color: #2888db; 
+    font: 10.42px/16.67px Arial;
+    
+    
+    
+}
+
+#newsletter {
+    background-color: #3faedb;
+    height: 133px;
+    width: 202px;
+    border-radius: 8px;
+    padding-top: 34px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-bottom: 15px;
+    position: relative;
+    
+    
+}
+
+#newsletter input[type="submit"] {
+    float: right;
+    margin-bottom: 15px;
+    width: 73px;
+    height: 28px;
+    border-radius: 12px;
+    border: 1px solid #3695bb;
+    background: linear-gradient(to bottom, #f6f6f7, #bcbbbb);
+    font: 12.5px/16.67px "AvantGarde-Book";
+    position: absolute;
+    left: 118px;
+    bottom: 0px;
+    
+}
+
+#newsletter input[type="text"] {
+    border: 1px solid #3695bb;
+    border-radius: 12px;
+    height: 26px;
+    width: 175px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+#newsletter h3 {
+    font: 18.75px/16.67px "AvantGarde-Book";
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+#newsletter a {
+    font: 10.42px/16.67px Arial;
+    color: white;
+}
+
+.alternative {
+    
+    position: absolute;
+    top: 280px;
+    left: 260px;
+    
+    
+}
+
+.alternative h2 {
+    font: 18.75px/16.67px "AvantGarde-Book";
+    color: #101010;
+}
+
+.alternative img {
+    float: left;
+    margin-right: 16px;
+    margin-top: 23px;
+    margin-bottom: 62px;
+}
+
+.alternative p {
+    font: bold 10.42px/16.67px Arial;
+    color: #484747;
+}
+
+.alternative>a {
+    display: block;
+    background: linear-gradient(to top, #1f80c7, #3baedd);
+    border-radius: 25px;
+    border: 1px solid #005796;
+    text-decoration: none;
+    width: 78px;
+    height: 29px;
+    position: absolute;
+    left: 416px;
+    top: 155px;
+    
+    
+}
+
+.alternative>a p {
+    color: white;
+    font: bold 12.5px/16.67px Arial;
+    text-align: center;
+    margin-top: 3px;
+    
+}
+
+#first-p {
+    color: black;
+    margin-top: 22px;
+    margin-bottom: 14px;
+}
+
+.opportunity {
+    clear: both;
+    position: absolute;
+    bottom: 213px;
+    top: 246px;
+}
+
+.opportunity h2 {
+    margin-bottom: 13px;
+}
+
+.second-h2 {
+    margin-top: 10px;
+}
+
+.opportunity p {
+    font: bold 10.42px/16.67px Arial;
+    color: #484747;
+    
+}
+
+.opportunity a {
+    font: bold 10.42px/16.67px Arial;
+    color: black;
+    
+}
+
+.opportunity a:before {
+    content: "• ";
+    text-decoration: none;
+}
+
+.first-two {
+    width: 215px;
+    margin-left: 9px;
+    
+}
+
+.second-two {
+   
+    width: 215px;
+    position: absolute;
+    top: 28px;
+    left: 276px;
+}
+
+footer {
+    clear: both;
+    background-color: #171717;
+    height: 140px;
+    border-bottom: 4px solid #009fff;
+    border-top: 2px solid #505050;
+    color: white;
+    padding-left: 86px;
+    padding-right: 88px;
+    padding-top: 16px;
+    
+}
+
+footer p {
+    text-align: right;
+    font: 12.5px Arial;
+    line-height: 23px;
+    color: #a09f9f;
+}
+
+footer ul {
+    float: left;
+    margin-right: 60px;
+    list-style-type: none;
+}
+
+footer ul h3 {
+    font: 16.67px/12.5px Arial;
+    margin-bottom: 12px;
+    margin-top: 5px;
+    color: #a09f9f;
+}
+
+footer li a{
+    color: white;
+    text-decoration: none;
+    font: 10.42px/12.5px Arial;
+    color: #a09f9f;
+}
+
+footer li:before {
+    color: #a09f9f;
+    content: "• ";
+}
+
+footer img {
+    float: right;
+    margin-right: 2px;
+}
+
+.patch {
+    height: 8px;
+    background-color: #d6d7d6;
+}

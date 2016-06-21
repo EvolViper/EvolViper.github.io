@@ -1,0 +1,431 @@
+@font-face {
+    font-family: "FuturaBT"; 
+    src: url(fonts/ufonts.com_futurabt-book-opentype.otf); 
+}
+
+@im
+
+body {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+header.main {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-left: 13%;
+    padding-right: 13%;
+}
+
+h1 {
+    float: left;
+    margin: 0;
+    margin-top: 42px;
+    margin-bottom: 42px;
+    padding: 0;
+    color: #ee8129;
+    font: 300 36px / 30px FuturaBT;
+}
+
+h1 span.name {
+    color: #3070a8;
+    font: 700 36px / 30px FuturaBT;
+}
+
+header.main nav {
+    float: right;
+    padding-top: 57px;
+    
+}
+
+nav.main-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav.main-nav ul li {
+    display: inline-block;
+}
+
+nav.main-nav ul a {
+    display: block;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 31px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font: 600 14px / 22px "Open Sans";
+    font-weight: 600;
+    color: #989898;
+}
+
+nav.main-nav ul a.active {
+    color: #3070a8;
+    border-bottom: 4px solid #3070a8;
+}
+
+nav.main-nav ul a:hover {
+    color: #3070a8;
+}
+
+.are-specialists {
+    display: table;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 86vh;
+    margin-bottom: 40px;
+    background-color: #365165;
+    background: url(images/are-specialists.jpg) no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    
+}
+
+@media screen and (max-width: 1600px) {
+    .are-specialists {
+        height: 84vh;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .are-specialists {
+        height: 81vh;
+    }
+}
+
+.are-specialists {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.are-specialists .specialists-content {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 20px;
+   
+}
+
+.are-specialists p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.are-specialists p:nth-child(1) {
+    padding: 0;
+    margin-left: 19%;
+    margin-right: 19%;
+    text-align: center;
+    font: 300 36px FuturaBT;
+}
+
+span.big-text {
+    font: 700 48px FuturaBT;
+    text-transform: uppercase;
+}
+
+.are-specialists p:nth-child(2) {
+    font: italic 20px/30px Calibri;
+    margin-left: 29%;
+    margin-right: 29%;
+    margin-bottom: 52px;
+    text-align: center;
+}
+
+.are-specialists .specialists-content a.button {
+    padding-left: 62px;
+    padding-right: 62px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    border: 1px solid #96a7b9;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "Open Sans" sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.advantages {
+    min-width: 490px;
+    overflow: hidden;
+    margin-bottom: 71px;
+    padding-left: 13%;
+    padding-right: 13%;
+    text-align: center;
+}
+
+.advantages h2 {
+    margin-bottom: 216px;
+    font: 700 30px / 25px "Trebuchet MS";
+    font-family: "Trebuchet MS" sans-serif;
+    color: #40525c;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.advantages .advantage {
+    position: relative;
+    display: inline-block;
+    width: 30.6%;
+    min-width: 150px;
+    float: left;
+    margin-right: 4%;
+    text-align: center;
+}
+
+.advantages .advantage:last-child {
+    margin-right: 0;
+}
+
+.advantages .advantage h3 {
+    font-family: FuturaBT;
+    font-size: 30.06px;
+    font-weight: 300;
+    color: #3070a8;
+    text-transform: uppercase;
+}
+
+.advantages .advantage p {
+    font-family: "Open Sans" sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    color: #999999;
+}
+
+.advantages .block1::before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    position: absolute;
+    top: -138px;
+    left: 50%;
+    margin-left: -70px;
+    width: 141px;
+    height: 141px;
+    background: url(images/advantages.png);
+    background-position: -156px -5px;
+}
+
+.advantages .block2::before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    position: absolute;
+    top: -138px;
+    left: 50%;
+    margin-left: -70px;
+    width: 141px;
+    height: 141px;
+    background: url(images/advantages.png);
+    background-position: -5px -5px;
+}
+
+.advantages .block3::before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    position: absolute;
+    top: -138px;
+    left: 50%;
+    margin-left: -70px;
+    width: 141px;
+    height: 141px;
+    background: url(images/advantages.png);
+    background-position: -156px -154px;
+}
+
+.some-block {
+    display: table;
+    height: 85vh;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 45px;
+    padding-left: 13%;
+    padding-right: 13%;
+    background-color: #242729;
+    background: url(images/some-block.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.some-block .some-block-conent {
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+}
+
+.some-block .some-block-conent p.header-line {
+    width: 49%;
+    font-family: FuturaBT;
+    font-size: 26px;
+    font-style: normal;
+    line-height: 48px;
+    color: #ee8129;
+    text-transform: uppercase;
+}
+
+.some-block .some-block-conent p {
+    width: 49%;
+    font-family: "Open Sans" sans-serif;
+    font-size: 19px;
+    line-height: 30px;
+    font-style: italic;
+}
+
+.some-block .some-block-conent ul {
+    width: 43%;
+    margin: 0;
+    font-family: "Open Sans";
+    font-size: 14px;
+    color: #9d9d9d;
+    
+}
+
+.some-block .some-block-conent ul li {
+    margin-bottom: 20px;
+}
+
+.some-block .some-block-conent ul li.highlighted {
+    color: #3070a8;
+}
+
+.contacts {
+    box-sizing: border-box;
+    padding-left: 13%;
+    color: #666666;
+    font-size: 0;
+    text-align: justify;
+}
+
+.contacts .address {
+    float: left;
+    width: 42.5%;
+    padding-top: 38px;
+    font-size: 14px;
+    font-family: "Open Sans";
+    line-height: 30px;
+}
+
+.contacts ul {
+    margin: 0;
+    margin-bottom: 30px;
+    padding-left: 60px;
+    list-style: none;
+}
+
+.contacts ul li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.contacts ul li:nth-child(2) {
+    margin-bottom: 5px;
+}
+
+.contacts ul li.street::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 31px;
+    width: 23px;
+    position: absolute;
+    top: 3px;
+    left: -56px;
+    background: url(images/contacts.png);
+    background-position: -5px -64px;
+}
+
+.contacts ul li.phone::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 26px;
+    position: absolute;
+    top: 3px;
+    left: -57px;
+    background: url(images/contacts.png);
+    background-position: -38px -64px;
+}
+
+.contacts ul li.mail::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 23px;
+    height: 16px;
+    position: absolute;
+    top: 10px;
+    left: -60px;
+    background: url(images/contacts.png);
+    background-position: -5px -5px;
+}
+
+.contacts .social {
+    font-size: 0;
+}
+
+.contacts .social a {
+    margin-right: 20px;
+}
+
+.contacts .social a[href="https://facebook.com/"]::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 48px;
+    height: 49px;
+    background: url(images/contacts.png);
+    background-position: -38px -5px;
+}
+
+.contacts .social a[href="https://twitter.com/"]::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 49px;
+    height: 49px;
+    background: url(images/contacts.png);
+    background-position: -66px -64px;
+}
+
+.contacts .social a[href="https://linkedin.com/"]::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 48px;
+    height: 49px;
+    background: url(images/contacts.png);
+    background-position: -96px -5px;
+}
+
+.contacts .map {
+    display: block;
+    float: right;
+    overflow: hidden;
+    height: 345px;
+    width: 57.5%;
+    background-color: red;
+}
+
+.main-footer {
+    clear: both;
+    padding-left: 13%;
+    padding-right: 13%;
+    padding-top: 13px;
+    padding-bottom: 16px;
+    background-color: #3070a8;
+    font-family: "Open Sans" sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    
+}
+
+.main-footer span.iconic-graphics {
+    color: #1d1b1b;
+    font-weight: 700;
+}

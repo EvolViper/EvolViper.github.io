@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    width: 1100px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+body>header {
+    background-color: #333;
+    color: #eee; 
+    padding: 54px 71px 48px;
+    height: 31px;
+}
+
+h1 {
+    font-family: 'Myriad Pro Regular';
+    font-size: 60px;
+    line-height: 16px;
+    color: #eee;
+   
+}
+
+h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    font-family: Arial;
+    font-size: 16px;
+    float: right;
+    
+    
+}
+nav a {
+    color: #eee;
+    
+}
+
+.selected {
+    color: #00aeef;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    clear: both;
+    
+    padding-left: 71px;
+    padding-right: 71px;
+}
+
+
+
+.main>header {
+    box-sizing: border-box;
+    border-bottom: 3px dotted #ccc;
+    height: 209px;
+    padding-bottom: 45px;
+    padding-top: 67px;
+    
+}
+
+.blue {
+    color: #00bff3;
+}
+
+.main>header p {
+    font-size: 50px;
+    font-family: "Myriad Pro Regular";
+    color: #bbb;
+    margin-top: 17px;    
+    
+}
+
+h2 {
+    font: 60px/16px "Myriad Pro Bold";
+    
+}
+
+.first-p {
+    box-sizing: border-box;
+    height: 190px;
+    font: 34px/42px "Myriad Pro Bold";
+    color: #555;
+    border-bottom: 3px dotted #ccc;
+    
+}
+
+.first-p b {
+    color: black;
+    
+}
+
+.service {
+    box-sizing: border-box;
+    border-bottom: 3px dotted #ccc;
+    height: 450px;
+    padding-top: 46px;
+    margin-bottom: 46px;
+    
+    
+    
+}
+
+.block {
+    box-sizing: border-box;
+    background-color: #00aeef;
+    height: 350px;
+    width: 282px;
+    font: 14px/21px Arial;
+    text-align: center;
+    color: #fff;
+    box-shadow: 5px 5px 5px rgba(170, 170, 170, .75);
+}
+
+.block header {
+    box-sizing: border-box;
+    height: 79px;
+    width: 237px;
+    display: block;
+    border-bottom: 2px dotted #fff;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+
+.block h4 {
+    
+    font: 40px/40px "Myriad Pro Regular";
+    padding-top: 14px;
+    
+    
+}
+
+.description {
+    padding: 32px 28px;
+    
+}
+
+.block.web-design {
+    
+    float: left;
+    margin-right: 55px;
+    
+}
+
+.block.marketing {
+    
+    float: left;
+    margin-right: 56px;
+    overflow: hidden;
+    
+}
+
+.block.optimization {
+    
+    float: left;
+    
+}
+
+.block a {
+    box-sizing: border-box;
+    display: block;
+    background-color: #0076a3;
+    font: 18px/24px "Myriad Pro Regular";
+    color: #fff;
+    text-align: center;
+    height: 41px;
+    padding-top: 6px;
+    border: 3px solid #195c74;
+    
+}
+
+.testimonials {
+    clear: both;
+    float: left;
+    box-sizing: border-box;
+    width: 480px;
+    border-right: 2px dotted #ccc;
+    margin-bottom: 33px;
+    margin-right: 46px;
+    padding-right: 40px;
+}
+
+.testimonials h5 {
+    font: 24px/42px "Myriad Pro Regular";
+    color: #555;
+    
+}
+
+.feedback {
+    margin-bottom: 40px;
+}
+
+.feedback img {
+    float: left;
+    margin-right: 27px;
+}
+
+.feedback q {
+    font: 12px/21px Arial;
+    color: #555;
+}
+
+.author {
+    font: bold 14px/18px Arial;
+    color: #555;
+}
+
+.testimonials a {
+    font: 14px/18px Arial;
+    color: #00aeef;
+}
+
+.featured-project {
+    font: 14px/21px Arial;
+    color: #555;
+}
+
+.featured-project p {
+    margin-bottom: 16px;
+}
+
+.featured-project a {
+    font: 14px/20px Arial;
+    color: #00aeef;
+}
+
+.featured-project h5 {
+    font: 24px/42px "Myriad Pro Regular";
+    color: #555;
+    margin-bottom: 3x;
+}
+
+.featured-project h6 {
+    
+    font: 20px/16px Arial;
+    color: #555;
+    margin-bottom: 11px;
+}
+
+.featured-project img {
+    display: block;
+    border: 1px solid #ccc;
+    margin-bottom: 19px;
+    box-shadow: 5px 5px 5px rgba(204, 204, 204, .75);
+}
+
+footer {
+    padding-top: 22px;
+    border-top: 3px dotted #ccc;
+    clear: both;
+    font: 16px/16px Arial;
+    color: #888
+}

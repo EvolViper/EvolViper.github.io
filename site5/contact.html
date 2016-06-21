@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href='https://fonts.googleapis.com/css?family=Oleo+Script:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Oxygen+Mono' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="contact.css">
+        <title>Officetime</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="main-header">
+                <div class="logo-block">
+                    <a href="index.html"><img src="images/main-logo.png" class="main-logo" alt="Logo"></a>
+                    <p class="main-subheader">Officetime a psd template</p>
+                </div>
+                <nav class="main-nav">
+                    <ul class="main-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li class="blog"><a href="#">Blog</a>
+                            <ul class="main-submenu">
+                                <li><a href="#">Articles<br><span class="complementary">this text is complementary</span></a></li>
+                                <li><a href="#">Writers</a></li>
+                                <li><a href="#">Top 50</a></li>
+                                <li><a href="#">The Hall of Fame</a></li>
+                            </ul>
+                        </li>
+                        <li class="last"><a href="contact.html">Help</a></li>
+                        <li><a href="#" class="apply-now">Apply Now</a></li>
+                    </ul>
+                </nav>
+                </header>
+                <section class="contact">
+                    <h2>Contact</h2>
+                    <div class="form-container">
+                        <h3 class="second-heading">Send us a Message</h3>
+                        <form action="contact.html" method="GET">
+                            <p><input type="text" name="name" id="name-id" required><label for="name-id">Name:</label></p>
+                            <p><input type="email" name="mail" id="mail-id" required><label for="mail-id">E-Mail:</label></p>
+                            <p><input type="url" name="website" id="website-id" required><label for="website-id">Website:</label></p>
+                            <p><label>Your Message:<textarea placeholder="Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et ma..." name="message" required></textarea></label></p>
+                            <input type="submit" value="Send Message">
+                        </form>
+                    </div>
+                    <div class="contact-information">
+                        <h3>Contact information</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>    
+                    </div>
+                </section>
+           </div>
+           <footer class="main-footer">
+               <div class="links">
+                   <h4>Single menu title</h4>
+                       <ul>
+                            <li><a href="#">Condimentum Etiam Purus</a></li>
+                            <li><a href="#">Quam Tristique Sem</a></li>
+                            <li><a href="#">Fusce Parturient</a></li>
+                            <li><a href="#">Tristique Tortor Condimentum</a></li>
+                            <li><a href="#">Magna Parturient Aenean</a></li>
+                            <li><a href="#">Tortor Nibh Etiam</a></li>
+                        </ul>
+                    </div>
+                    <div class="links">
+                       <h4>Cursus Venenatis Mollis</h4>
+                        <ul>
+                            <li><a href="#">Condimentum Etiam Purus</a></li>
+                            <li><a href="#">Quam Tristique Sem</a></li>
+                            <li><a href="#">Fusce Parturient</a></li>
+                            <li><a href="#">Tristique Tortor Condimentum</a></li>
+                            <li><a href="#">Magna Parturient Aenean</a></li>
+                            <li><a href="#">Cursus Justo Fringilla</a></li>
+                        </ul>
+                    </div>
+                    <div class="links">
+                       <h4>Cursus Venenatis Mollis</h4>
+                        <ul>
+                            <li><a href="#">Condimentum Etiam Purus</a></li>
+                            <li><a href="#">Quam Tristique Sem</a></li>
+                            <li><a href="#">Fusce Parturient</a></li>
+                            <li><a href="#">Tristique Tortor Condimentum</a></li>
+                            <li><a href="#">Magna Parturient Aenean</a></li>
+                            <li><a href="#">Cursus Justo Fringilla</a></li>
+                        </ul>
+                    </div>
+            </footer>
+            <script>
+                var inputName = document.getElementById("name-id");
+                var inputMail = document.getElementById("mail-id");
+                var inputWebsite = document.getElementById("website-id");
+                var div = document.createElement('div');
+               
+                function createDiv() {
+                    div.style.width = "184px";
+                    div.style.height = "26px";
+                    div.style.backgroundColor = "white";
+                    div.style.position = "absolute";
+                    div.style.top = "283px";
+                    div.style.left = "300px";
+                    document.querySelector(".contact").appendChild(div);
+                    
+                }
+                
+                window.onload = function() {
+                    inputName.style.borderColor = "#dddddd";
+                    inputMail.style.borderColor = "#dddddd";
+                    inputWebsite.style.borderColor = "#dddddd";
+                    createDiv();
+                }
+                inputName.oninput = function () {
+                    inputName.style.borderColor = null;
+                }
+                inputMail.oninput = function () {
+                    inputMail.style.borderColor = null;
+                    document.querySelector(".contact").removeChild(div);
+                }
+                inputWebsite.oninput = function () {
+                    inputWebsite.style.borderColor = null;
+                }
+            </script>
+    </body>
+</html>
