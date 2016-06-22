@@ -1,52 +1,249 @@
+.content-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 1170px;
+}
+
 .slider {
     position: relative;
     overflow: hidden;
-    height: 800px;
+    min-height: 800px;
     background-color: #1f262e;
     background-image: url(images/background.jpg);
     font-family: Lato;
     background-position: 50% 43%;
     background-size: cover;
+    border-bottom: 4px solid #7dabbf;
     color: white;
 }
 
-.slider:after {
+.slider .main + .content-wrapper {
+    overflow: visible;
+    position: relative;
+}
+
+.slider .main + .content-wrapper:before {
     display: block;
     content: "";
     position: absolute;
-    left: -70px;
-    bottom: -80px;
+    left: -222px;
+    bottom: -222px;
     width: 755px;
     height: 682px;
-    transform: rotate(-7deg);
+    transform: rotate(-10deg);
     background-image: url(images/smartphone.png);
-    background-position: 0px 0px;
+    -background-position: 0px 0px;
     background-size: 100% auto;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    -background-attachment: scroll;
+}
+
+.slider .main + .content-wrapper:after {
+    display: block;
+    content: "";
+    clear: both;
 }
 
 .slider header.main {
     overflow: hidden;
-    padding-left: 10.5%;
-    padding-right: 10.5%;
+    padding-top: 17px;
+    padding-bottom: 28px;
     background-color: rgba(0, 0, 0, 0.7);
     font-family: "Droid Sans";
     font-size: 13px;
 }
 
-.slider .main-menu ul {
+.slider .main-menu {
+    padding-top: 24px;
     float: right;
+}
+
+.slider .main-menu ul {
     padding: 0;
     margin: 0;
+   
 }
 
 .slider .main-menu ul li {
+    padding: 0;
+    margin: 0;
+    margin-left: 35px;
     display: inline-block;
+    
 }
 
 .slider .main-menu ul a {
+    overflow: visible;
+    position: relative;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
+    letter-spacing: -0.3px;
 }
+
+.slider .main-menu ul a:hover {
+    color: #4bcaff;
+}
+
+.slider .main-menu ul a.active {
+    color: #4bcaff;
+    font-weight: bold;
+}
+
+.slider .main-menu ul a.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -39px;
+    width: 100%;
+    height: 2px;
+    background-color: #4bcaff;
+    
+}
+
+.slider .slider-content {
+    position: relative;
+    z-index: 1;
+    float: right;
+    width: 672px;
+    padding-top: 206px;
+}
+
+.slider .slider-content h1 {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 1px;
+}
+
+.slider .slider-content .amazing {
+    font-weight: 700;
+}
+
+.slider .slider-content p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.slider .slider-content .rectangle-button {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 195px;
+    height: 65px;
+    margin-top: 20px;
+    margin-left: 3px;
+    margin-bottom: 52px;
+    border-radius: 7px;
+    font-family: Lato;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-top: 23px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.slider .slider-content .download {
+    border: 2px solid white;
+    margin-right: 34px;
+    
+}
+
+.slider .slider-content .learn-more {
+    height: 62px;
+    background-color: #4bcaff;
+    box-shadow: 0 4px 0 #277697;
+}
+
+.slider .slider-content .mobile-platforms {
+    margin-left: 2px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.slider .slider-content .mobile-platforms .available {
+    margin-right: 20px;
+}
+
+.slider .slider-content .mobile-platforms a {
+    display: inline-block;
+    vertical-align: middle;
+    width: 52px;
+    height: 52px;
+    margin-right: 13px;
+    position: relative;
+    background-color: #242b33;
+    border-radius: 100%;
+    font-size: 0;
+}
+
+.slider .slider-content .mobile-platforms a:after {
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url(images/icons.png);
+    background-repeat: no-repeat;
+}
+
+.slider .slider-content .mobile-platforms a.apple:after {
+    width: 20px;
+    height: 25px;
+    top: 26px;
+    left: 26px;
+    margin-top: -15px;
+    margin-left: -10px;
+    background-position: -37px -5px;
+}
+
+.slider .slider-content .mobile-platforms a.android:after {
+    width: 22px;
+    height: 25px;
+    top: 26px;
+    left: 26px;
+    margin-top: -12px;
+    margin-left: -11px;
+    background-position: -5px -5px;
+}
+
+.slider .slider-button {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background-color: #7dabbf;
+    border-radius: 100%;
+    border: none;
+}
+
+.slider .slider-button.left {
+    left: -584px;
+    bottom: 260px;
+}
+
+.slider .slider-button.right {
+    left: 702px;
+    bottom: 260px;
+}
+
+
+.slider .slider-button.left:after, .slider-button.right:after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background-color: white;
+    transform: rotate(45deg);
+}
+
+.slider .slider-button.left:before, .slider-button.right:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background-color: white;
+    transform: rotate(-45deg);
+}
+
