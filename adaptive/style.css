@@ -162,7 +162,7 @@ body {
 }
 
 .photos-block {
-    
+    background-color: #5b0fa1; 
 }
 
 .photos-block .violet-button {
@@ -254,7 +254,11 @@ body {
     .photos-block .violet-button {
         float: left;
         width: 33.4%;
-        height: 28.65vw;
+        height: 28.4vw;
+    }
+    
+    .photos-block .violet-button:hover {
+        background-color: red;
     }
     
     .photos-block img {
