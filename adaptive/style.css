@@ -257,10 +257,6 @@ body {
         height: 28.4vw;
     }
     
-    .photos-block .violet-button:hover {
-        background-color: red;
-    }
-    
     .photos-block img {
         float: right;
         width: 33.3%;
