@@ -1,6 +1,9 @@
 body {
-   font-family: Montserrat;
+   max-width: 1024px;
+    font-family: Montserrat;
    padding: 0;
+    margin: auto;
+    
 }
 
 .header-section {
@@ -40,6 +43,7 @@ body {
     left: 0;
     top: 37px;
     width: 100%;
+    max-width: 1024px;
     background-color: #373c3f;
 }
 
@@ -255,10 +259,17 @@ body {
         float: left;
         width: 33.4%;
         height: 28.4vw;
+        max-height: 291px;
     }
     
     .photos-block img {
         float: right;
         width: 33.3%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header-section nav.main-nav .nav-list {
+        position: block;
     }
 }
