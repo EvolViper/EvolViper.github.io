@@ -13,4 +13,7 @@
             showMenu = true;
         }
     }
+    document.body.onresize = function() {
+        menu.style.display = "";
+    }
 })();
