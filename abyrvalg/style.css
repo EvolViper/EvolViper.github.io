@@ -57,6 +57,7 @@ body {
     height: 70px;
     background-color: black;
     opacity: 0;
+    transition: opacity 1.5s;
 }
 
 .main-page {
