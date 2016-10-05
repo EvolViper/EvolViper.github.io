@@ -15,7 +15,6 @@ body {
 }
 
 .main-header {
-    background-color: black;
     position: fixed;
     z-index: 2;
     top: 0;
@@ -49,6 +48,15 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     color: white;
+}
+
+.header-background {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    opacity: 0;
 }
 
 .main-page {
