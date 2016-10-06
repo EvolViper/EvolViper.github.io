@@ -244,12 +244,16 @@ body {
    box-sizing: border-box;
    width: 25%;
    padding-left: 1.5%;
-   float: right;     
+   float: right;
 }
 
 .work .gallery .work-small .pic-container {
     position: relative;
-    margin-bottom: 4%;
+    margin-bottom: 4.4%;
+}
+
+.work .gallery .work-small .pic-container:last-child {
+    margin-bottom: 0;
 }
 
 .work .gallery .work-small .pic-overlay {
@@ -276,7 +280,7 @@ body {
 .contact {
     padding-top: 158px;
     padding-bottom: 95px;
-    background-color: #181e2a;
+    background-color: black;
 }
 
 .contact .heading {
