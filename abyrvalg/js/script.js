@@ -24,14 +24,14 @@ function smoothScroll(direction) {
     if (direction === "down") {
        
        for (var i = 0; i < window.innerHeight / 10; i++) {
-           setTimeout("window.scrollBy(0, 10)", timer * 2);
+           setTimeout("window.scrollBy(0, 10)", timer * 4);
            timer++;
         } 
     }
     
     else {
             for (var i = 0; i < window.innerHeight / 10; i++) {
-            setTimeout("window.scrollBy(0, -10)", timer * 2);
+            setTimeout("window.scrollBy(0, -10)", timer * 4);
             timer++;
         } 
     }
@@ -97,7 +97,7 @@ function onWheel(evt) {
     }
     setTimeout(function() {
         document.addEventListener("wheel", onWheel);
-    }, 600)
+    }, 700)
 }
 
 /*window.onscroll = function() {
