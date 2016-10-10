@@ -10,11 +10,16 @@ var headerBg = document.querySelector(".header-background");
     }
 }*/
 
+//Убираем скроллбар
+
+document.body.style="overflow: hidden";
+
 //Скроллинг
 
 var scrollButton = document.querySelector(".scroll-button");
 var anchor = document.getElementById("about");
 
+/*
 scrollButton.onclick = function(evt) {
     var anchorPosition = anchor.offsetTop;
     var scrollDistance = 0;
@@ -28,16 +33,25 @@ scrollButton.onclick = function(evt) {
     }
     //window.scrollBy(0, scrollDistance);
 }
+*/
 
 //Дискретная прокрутка
 
 var currentOffset = window.pageYOffset;
-var about = document.getElementById("about");
-var work = document.getElementById("work");
-var work = document.getElementById("contact");
 
+document.onkeydown = function(evt) {
+    if (evt.keyCode === 40) {
+        evt.preventDefault();
+        window.scrollBy(0, window.innerHeight);
+    }
+    if (evt.keyCode === 38) {
+        evt.preventDefault();
+        window.scrollBy(0, -window.innerHeight);
+    }
+    
+}
 
-window.onscroll = function() {
+/*window.onscroll = function() {
     if (currentOffset - window.pageYOffset > 0) {
         console.log("Up!");
         window.scrollBy(0, -window.innerHeight);
@@ -47,11 +61,39 @@ window.onscroll = function() {
         window.scrollBy(0, window.innerHeight);
     }
     currentOffset = window.pageYOffset;
-    /*
+    
     if (window.pageYOffset > 0) {
         headerBg.style.opacity = 1;
     }
     if (window.pageYOffset === 0) {
         headerBg.style.opacity = 0;
-    }*/
+    }
+}*/
+
+
+//Внутреннее меню
+
+var about = document.getElementById("about");
+var work = document.getElementById("work");
+var contact = document.getElementById("contact");
+
+var anchorAbout = document.querySelector(".main-nav a[href='#about']");
+var anchorWork = document.querySelector(".main-nav a[href='#work']");
+var anchorContact = document.querySelector(".main-nav a[href='#contact']");
+
+
+anchorAbout.onclick = function(evt) {
+    evt.preventDefault();
+    window.scrollTo(0, about.offsetTop);
+}
+
+anchorWork.onclick = function(evt) {
+    evt.preventDefault();
+    window.scrollTo(0, work.offsetTop);
+}
+
+anchorContact.onclick = function(evt) {
+    evt.preventDefault();
+    window.scrollTo(0, contact.offsetTop);
+    
 }
