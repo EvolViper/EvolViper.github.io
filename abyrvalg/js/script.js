@@ -14,10 +14,29 @@ var headerBg = document.querySelector(".header-background");
 
 document.body.style="overflow: hidden";
 
-//Скроллинг
+//Плавный скроллинг
 
 var scrollButton = document.querySelector(".scroll-button");
 var anchor = document.getElementById("about");
+
+function smoothScroll(direction) {
+    var timer = 0;
+    if (direction === "down") {
+       
+       for (var i = 0; i < window.innerHeight / 10; i++) {
+           setTimeout("window.scrollBy(0, 10)", timer * 2);
+           timer++;
+        } 
+    }
+    
+    else {
+            for (var i = 0; i < window.innerHeight / 10; i++) {
+            setTimeout("window.scrollBy(0, -10)", timer * 2);
+            timer++;
+        } 
+    }
+    
+}
 
 /*
 scrollButton.onclick = function(evt) {
@@ -42,16 +61,19 @@ var currentOffset = window.pageYOffset;
 document.onkeydown = function(evt) {
     if (evt.keyCode === 40) {
         evt.preventDefault();
-        window.scrollBy(0, window.innerHeight);
+        smoothScroll("down");
+        //window.scrollBy(0, window.innerHeight);
     }
     else if (evt.keyCode === 38) {
         evt.preventDefault();
-        window.scrollBy(0, -window.innerHeight);
+        smoothScroll("up");
+        //window.scrollBy(0, -window.innerHeight);
     }
     
     else if (evt.keyCode === 32) {
         evt.preventDefault();
-        window.scrollBy(0, window.innerHeight);
+        smoothScroll("down");
+        //window.scrollBy(0, window.innerHeight);
     }
     
 }
@@ -59,17 +81,23 @@ document.onkeydown = function(evt) {
 document.addEventListener("wheel", onWheel);
 function onWheel(evt) {
     evt.preventDefault();
-    console.log(evt.deltaY);
+    document.removeEventListener("wheel", onWheel);
     if ("wheelDelta" in document) {
-        if (evt.wheelDelta < 0) window.scrollBy(0, window.innerHeight);
-        if (evt.wheelDelta > 0) window.scrollBy(0, -window.innerHeight);
+        //if (evt.wheelDelta < 0) window.scrollBy(0, window.innerHeight);
+        //if (evt.wheelDelta > 0) window.scrollBy(0, -window.innerHeight);
+        if (evt.wheelDelta < 0) smoothScroll("down");
+        if (evt.wheelDelta > 0) smoothScroll("up");
     }
     
     else  {
-        if (evt.deltaY < 0) window.scrollBy(0, -window.innerHeight);
-        if (evt.deltaY > 0) window.scrollBy(0, window.innerHeight);
+        //if (evt.deltaY < 0) window.scrollBy(0, -window.innerHeight);
+        //if (evt.deltaY > 0) window.scrollBy(0, window.innerHeight);
+        if (evt.deltaY < 0) smoothScroll("up");
+        if (evt.deltaY > 0) smoothScroll("down");
     }
-    
+    setTimeout(function() {
+        document.addEventListener("wheel", onWheel);
+    }, 600)
 }
 
 /*window.onscroll = function() {
