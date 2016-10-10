@@ -72,7 +72,6 @@ body.blog-body {
     padding-top: 300px;
     padding-bottom: 390px;
     background-image: url(img/main-bg.jpg);
-    background-position: 
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -231,14 +230,20 @@ body.blog-body {
 }
 
 .work {
-    padding-top: 170px;
-    padding-bottom: 100px;
+    box-sizing: border-box;
+    display: table;
+    width: 100%;
+    height: 100vh;
+    -padding-top: 170px;
+    -padding-bottom: 100px;
+    padding-left: 5%;
+    padding-right: 5%;
     background-color: #181e2a;
 }
 
 .work .gallery {
-    width: 89.5%;
-    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
     overflow: hidden;
 }
 
@@ -290,9 +295,17 @@ body.blog-body {
 }
 
 .contact {
-    padding-top: 158px;
-    padding-bottom: 95px;
+    display: table;
+    width: 100%;
+    height: 100vh;
+    -padding-top: 158px;
+    -padding-bottom: 95px;
     background-color: black;
+}
+
+.contact .content-container {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .contact .heading {
@@ -305,6 +318,7 @@ body.blog-body {
 }
 
 .contact form {
+    vertical-align: middle;
     width: 510px;
     margin: auto;
     margin-top: 30px;
