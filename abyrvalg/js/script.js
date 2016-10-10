@@ -49,6 +49,27 @@ document.onkeydown = function(evt) {
         window.scrollBy(0, -window.innerHeight);
     }
     
+    else if (evt.keyCode === 32) {
+        evt.preventDefault();
+        window.scrollBy(0, window.innerHeight);
+    }
+    
+}
+
+document.addEventListener("wheel", onWheel);
+function onWheel(evt) {
+    evt.preventDefault();
+    console.log(evt.deltaY);
+    if ("wheelDelta" in document) {
+        if (evt.wheelDelta < 0) window.scrollBy(0, window.innerHeight);
+        if (evt.wheelDelta > 0) window.scrollBy(0, -window.innerHeight);
+    }
+    
+    else  {
+        if (evt.deltaY < 0) window.scrollBy(0, -window.innerHeight);
+        if (evt.deltaY > 0) window.scrollBy(0, window.innerHeight);
+    }
+    
 }
 
 /*window.onscroll = function() {
