@@ -44,7 +44,7 @@ document.onkeydown = function(evt) {
         evt.preventDefault();
         window.scrollBy(0, window.innerHeight);
     }
-    if (evt.keyCode === 38) {
+    else if (evt.keyCode === 38) {
         evt.preventDefault();
         window.scrollBy(0, -window.innerHeight);
     }
