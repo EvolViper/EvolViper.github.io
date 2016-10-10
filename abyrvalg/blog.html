@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed|Ubuntu:300&subset=cyrillic" rel="stylesheet"> 
     </head>
-    <body>
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:900&subset=cyrillic" rel="stylesheet"> 
+    <body class="blog-body">
         <header class="main-header wrapper">
             <a href="index.html"><img src="img/small-logo.png" alt="Logo" class="small-logo"></a>
             <nav class="main-nav">
@@ -20,8 +21,8 @@
             </nav>
         </header>
         <div class="header-background" style="opacity: 1"></div>
-        <main class="blog wrapper">
-             <article class="blog-post" id="first-post">
+        <main class="blog" id="blog-top">
+             <article class="blog-post">
                  <header class="post-header">
                      <h1>Аэродинамическая компенсация рулей</h1>
                      <time datetime="2016-06-02">2 июня 2016</time>
@@ -75,9 +76,11 @@
              </article>
         </main>
         <footer class="blog-footer">
-            <a href="#">Previuos page</a>
-            <a href="#">Next page</a>
-            <a href="#first-post">Up</a>
+            <div class="button-block">
+                <a href="#" class="page-button previous disabled">Previuos page</a>
+                <a href="#" class="page-button next">Next page</a>
+                <a href="#blog-top" class="page-button up">Up</a>
+            </div>
         </footer>
     </body>
 </html>
