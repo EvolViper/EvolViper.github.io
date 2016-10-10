@@ -66,11 +66,10 @@ body.blog-body {
 }
 
 .main-page {
+    display: table;
     position: relative;
     width: 100%;
     height: 100vh;
-    padding-top: 300px;
-    padding-bottom: 390px;
     background-image: url(img/main-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -86,6 +85,8 @@ body.blog-body {
 }
 
 .main-page .page-content {
+    display: table-cell;
+    vertical-align: middle;
     position: relative;
 }
 

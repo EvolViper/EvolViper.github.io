@@ -47,11 +47,11 @@ window.onscroll = function() {
         window.scrollBy(0, window.innerHeight);
     }
     currentOffset = window.pageYOffset;
-    
+    /*
     if (window.pageYOffset > 0) {
         headerBg.style.opacity = 1;
     }
     if (window.pageYOffset === 0) {
         headerBg.style.opacity = 0;
-    }
+    }*/
 }
