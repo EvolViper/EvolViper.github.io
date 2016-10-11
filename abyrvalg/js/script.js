@@ -25,25 +25,32 @@ var anchorWork = document.querySelector(".main-nav a[href='#work']");
 var anchorContact = document.querySelector(".main-nav a[href='#contact']");
 
 window.addEventListener("load", activeLink);
+//window.onscroll = activeLink;
 window.addEventListener("scroll", activeLink);
 
+
 function activeLink() {
+    console.log(window.pageYOffset);
     if (window.pageYOffset == 0) {
+        console.log("Main");
         anchorAbout.classList.remove("active");
         anchorWork.classList.remove("active");
         anchorContact.classList.remove("active");
     }
-    else if (window.pageYOffset == about.offsetTop) {
+    else if (window.pageYOffset >= (about.offsetTop - 15) && window.pageYOffset <= (about.offsetTop + 15)) {
+        console.log("About");
         anchorAbout.classList.add("active");
         anchorWork.classList.remove("active");
         anchorContact.classList.remove("active");
     }
-    else if (window.pageYOffset == work.offsetTop) {
+    else if (window.pageYOffset >= (work.offsetTop - 15) && window.pageYOffset <= (work.offsetTop + 15)) {
+        console.log("Work");
         anchorAbout.classList.remove("active");
         anchorWork.classList.add("active");
         anchorContact.classList.remove("active");
     }
-    else if (window.pageYOffset == contact.offsetTop) {
+    else if (window.pageYOffset >= (contact.offsetTop - 15) && window.pageYOffset <= (contact.offsetTop + 15)) {
+        console.log("Contact");
         anchorAbout.classList.remove("active");
         anchorWork.classList.remove("active");
         anchorContact.classList.add("active");
@@ -71,7 +78,6 @@ function smoothScroll(direction) {
             timer++;
         } 
     }
-    
 }
 
 /*

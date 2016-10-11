@@ -215,12 +215,13 @@ body.blog-body {
 .lower-block .contacts-block {
     width: 195px;
     margin: auto;
-    padding-top: 5px;
+    margin-top: 25px;
     text-align: center;
 }
 
 .lower-block .contacts-block a {
     display: inline-block;
+    vertical-align: middle;
     margin-right: 27px;
     font-size: 0;
 }
@@ -417,12 +418,13 @@ body.blog-body {
 .contact .follow-us {
     width: 195px;
     margin: auto;
-    padding-top: 5px;
+    margin-top: 35px;
     text-align: center;
 }
 
 .contact .follow-us a {
     display: inline-block;
+    vertical-align: middle;
     margin-right: 27px;
     font-size: 0;
 }
