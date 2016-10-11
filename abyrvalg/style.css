@@ -63,9 +63,9 @@ body.blog-body {
     position: absolute;
     left: 0;
     bottom: -5px;
-    background-color: #9f9f9f;
+    background-color: white;
     opacity: 0;
-    transition: width 0.4s ease-out;
+    transition: width 0.2s ease-out;
 }
 
 .main-header .main-nav a:hover::after, .main-header .main-nav a.active::after {

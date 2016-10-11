@@ -1,3 +1,7 @@
+//Убираем скроллбар
+
+document.body.style="overflow: hidden";
+
 //Затемнение верхнего меню
 
 var headerBg = document.querySelector(".header-background");
@@ -10,9 +14,14 @@ window.onscroll = function() {
     }
 }
 
-//Убираем скроллбар
+//Подчеркивание ссылок в меню
 
-document.body.style="overflow: hidden";
+window.addEventListener("load", activeLink);
+
+
+function activeLink() {
+    
+}
 
 //Плавный скроллинг
 
