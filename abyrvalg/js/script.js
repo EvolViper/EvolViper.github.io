@@ -28,22 +28,22 @@ window.addEventListener("load", activeLink);
 window.addEventListener("scroll", activeLink);
 
 function activeLink() {
-    if (window.pageYOffset >= 0 && window.pageYOffset < about.offsetTop) {
+    if (window.pageYOffset == 0) {
         anchorAbout.classList.remove("active");
         anchorWork.classList.remove("active");
         anchorContact.classList.remove("active");
     }
-    else if (window.pageYOffset >= about.offsetTop && window.pageYOffset < work.offsetTop) {
+    else if (window.pageYOffset == about.offsetTop) {
         anchorAbout.classList.add("active");
         anchorWork.classList.remove("active");
         anchorContact.classList.remove("active");
     }
-    else if (window.pageYOffset >= work.offsetTop && window.pageYOffset < contact.offsetTop) {
+    else if (window.pageYOffset == work.offsetTop) {
         anchorAbout.classList.remove("active");
         anchorWork.classList.add("active");
         anchorContact.classList.remove("active");
     }
-    else if (window.pageYOffset >= contact.offsetTop) {
+    else if (window.pageYOffset == contact.offsetTop) {
         anchorAbout.classList.remove("active");
         anchorWork.classList.remove("active");
         anchorContact.classList.add("active");
