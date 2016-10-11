@@ -1,14 +1,14 @@
 //Затемнение верхнего меню
 
 var headerBg = document.querySelector(".header-background");
-/*window.onscroll = function() {
+window.onscroll = function() {
     if (window.scrollY > 0) {
         headerBg.style.opacity = 1;
     }
     if (window.scrollY === 0) {
         headerBg.style.opacity = 0;
     }
-}*/
+}
 
 //Убираем скроллбар
 
@@ -24,14 +24,14 @@ function smoothScroll(direction) {
     if (direction === "down") {
        
        for (var i = 0; i < window.innerHeight / 10; i++) {
-           setTimeout("window.scrollBy(0, 10)", timer * 4);
+           setTimeout("window.scrollBy(0, 10)", timer * 6);
            timer++;
         } 
     }
     
     else {
             for (var i = 0; i < window.innerHeight / 10; i++) {
-            setTimeout("window.scrollBy(0, -10)", timer * 4);
+            setTimeout("window.scrollBy(0, -10)", timer * 6);
             timer++;
         } 
     }
@@ -97,7 +97,7 @@ function onWheel(evt) {
     }
     setTimeout(function() {
         document.addEventListener("wheel", onWheel);
-    }, 700)
+    }, 800)
 }
 
 /*window.onscroll = function() {
@@ -131,18 +131,26 @@ var anchorWork = document.querySelector(".main-nav a[href='#work']");
 var anchorContact = document.querySelector(".main-nav a[href='#contact']");
 
 
-anchorAbout.onclick = function(evt) {
+function buttonScroll(evt) {
     evt.preventDefault();
-    window.scrollTo(0, about.offsetTop);
+    var anchor = evt.target.getAttribute("href");
+    var scrollTarget = document.getElementById(anchor.slice(1));
+    console.log(scrollTarget);
+    if (scrollTarget.offsetTop > window.pageYOffset) {
+        console.log(scrollTarget);
+        console.log(scrollTarget.offsetTop - window.pageYOffset);
+        window.scrollBy(0, scrollTarget.offsetTop - window.pageYOffset);
+    }
+    else if (scrollTarget.offsetTop < window.pageYOffset) {
+        console.log(scrollTarget);
+        console.log(window.pageYOffset - scrollTarget.offsetTop);
+        window.scrollBy(0, -window.pageYOffset - scrollTarget.offsetTop);
+    }
+    else {
+        return;
+    }
 }
 
-anchorWork.onclick = function(evt) {
-    evt.preventDefault();
-    window.scrollTo(0, work.offsetTop);
-}
-
-anchorContact.onclick = function(evt) {
-    evt.preventDefault();
-    window.scrollTo(0, contact.offsetTop);
-    
-}
+anchorAbout.addEventListener("click", buttonScroll);
+anchorWork.addEventListener("click", buttonScroll);
+anchorContact.addEventListener("click", buttonScroll);

@@ -46,12 +46,31 @@ body.blog-body {
 }
 
 .main-header .main-nav a {
+    position: relative;
     margin-left: 25px;
     font-family: 'Ubuntu', sans-serif;
     font-size: 14px;
     text-decoration: none;
     text-transform: uppercase;
     color: white;
+}
+
+.main-header .main-nav a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color: #9f9f9f;
+    opacity: 0;
+    transition: width 0.4s ease-out;
+}
+
+.main-header .main-nav a:hover::after, .main-header .main-nav a.active::after {
+    opacity: 1;
+    width: 100%;
 }
 
 .header-background {
