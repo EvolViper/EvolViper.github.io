@@ -16,11 +16,38 @@ window.onscroll = function() {
 
 //Подчеркивание ссылок в меню
 
-window.addEventListener("load", activeLink);
+var about = document.getElementById("about");
+var work = document.getElementById("work");
+var contact = document.getElementById("contact");
 
+var anchorAbout = document.querySelector(".main-nav a[href='#about']");
+var anchorWork = document.querySelector(".main-nav a[href='#work']");
+var anchorContact = document.querySelector(".main-nav a[href='#contact']");
+
+window.addEventListener("load", activeLink);
+window.addEventListener("scroll", activeLink);
 
 function activeLink() {
-    
+    if (window.pageYOffset >= 0 && window.pageYOffset < about.offsetTop) {
+        anchorAbout.classList.remove("active");
+        anchorWork.classList.remove("active");
+        anchorContact.classList.remove("active");
+    }
+    else if (window.pageYOffset >= about.offsetTop && window.pageYOffset < work.offsetTop) {
+        anchorAbout.classList.add("active");
+        anchorWork.classList.remove("active");
+        anchorContact.classList.remove("active");
+    }
+    else if (window.pageYOffset >= work.offsetTop && window.pageYOffset < contact.offsetTop) {
+        anchorAbout.classList.remove("active");
+        anchorWork.classList.add("active");
+        anchorContact.classList.remove("active");
+    }
+    else if (window.pageYOffset >= contact.offsetTop) {
+        anchorAbout.classList.remove("active");
+        anchorWork.classList.remove("active");
+        anchorContact.classList.add("active");
+    }
 }
 
 //Плавный скроллинг
@@ -131,35 +158,22 @@ function onWheel(evt) {
 
 //Внутреннее меню
 
-var about = document.getElementById("about");
-var work = document.getElementById("work");
-var contact = document.getElementById("contact");
-
-var anchorAbout = document.querySelector(".main-nav a[href='#about']");
-var anchorWork = document.querySelector(".main-nav a[href='#work']");
-var anchorContact = document.querySelector(".main-nav a[href='#contact']");
-
-
 function buttonScroll(evt) {
     evt.preventDefault();
     var anchor = evt.target.getAttribute("href");
     var scrollTarget = document.getElementById(anchor.slice(1));
     console.log(scrollTarget);
     if (scrollTarget.offsetTop > window.pageYOffset) {
-        console.log(scrollTarget);
-        console.log(scrollTarget.offsetTop - window.pageYOffset);
         window.scrollBy(0, scrollTarget.offsetTop - window.pageYOffset);
     }
     else if (scrollTarget.offsetTop < window.pageYOffset) {
-        console.log(scrollTarget);
-        console.log(window.pageYOffset - scrollTarget.offsetTop);
-        window.scrollBy(0, -window.pageYOffset - scrollTarget.offsetTop);
+        window.scrollBy(0, -(window.pageYOffset - scrollTarget.offsetTop));
     }
     else {
         return;
     }
 }
 
-anchorAbout.addEventListener("click", buttonScroll);
-anchorWork.addEventListener("click", buttonScroll);
-anchorContact.addEventListener("click", buttonScroll);
+anchorAbout.addEventListener("click", buttonScroll, activeLink);
+anchorWork.addEventListener("click", buttonScroll, activeLink);
+anchorContact.addEventListener("click", buttonScroll, activeLink);

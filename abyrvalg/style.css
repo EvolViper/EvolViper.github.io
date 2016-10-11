@@ -65,12 +65,17 @@ body.blog-body {
     bottom: -5px;
     background-color: white;
     opacity: 0;
-    transition: width 0.2s ease-out;
+    
 }
 
 .main-header .main-nav a:hover::after, .main-header .main-nav a.active::after {
+    transition: width 0.2s ease-out;
     opacity: 1;
     width: 100%;
+}
+
+.main-header .main-nav a.active {
+    pointer-events: none;
 }
 
 .header-background {
