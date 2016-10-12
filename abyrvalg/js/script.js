@@ -23,6 +23,7 @@ var contact = document.getElementById("contact");
 var anchorAbout = document.querySelector(".main-nav a[href='#about']");
 var anchorWork = document.querySelector(".main-nav a[href='#work']");
 var anchorContact = document.querySelector(".main-nav a[href='#contact']");
+var smallLogo = document.querySelector(".logo-link");
 
 window.addEventListener("load", activeLink);
 //window.onscroll = activeLink;
@@ -36,24 +37,28 @@ function activeLink() {
         anchorAbout.classList.remove("active");
         anchorWork.classList.remove("active");
         anchorContact.classList.remove("active");
+        smallLogo.classList.add("active");
     }
     else if (window.pageYOffset >= (about.offsetTop - 15) && window.pageYOffset <= (about.offsetTop + 15)) {
         console.log("About");
         anchorAbout.classList.add("active");
         anchorWork.classList.remove("active");
         anchorContact.classList.remove("active");
+        smallLogo.classList.remove("active");
     }
     else if (window.pageYOffset >= (work.offsetTop - 15) && window.pageYOffset <= (work.offsetTop + 15)) {
         console.log("Work");
         anchorAbout.classList.remove("active");
         anchorWork.classList.add("active");
         anchorContact.classList.remove("active");
+        smallLogo.classList.remove("active");
     }
     else if (window.pageYOffset >= (contact.offsetTop - 15) && window.pageYOffset <= (contact.offsetTop + 15)) {
         console.log("Contact");
         anchorAbout.classList.remove("active");
         anchorWork.classList.remove("active");
         anchorContact.classList.add("active");
+        smallLogo.classList.remove("active");
     }
 }
 
@@ -79,22 +84,6 @@ function smoothScroll(direction) {
         } 
     }
 }
-
-/*
-scrollButton.onclick = function(evt) {
-    var anchorPosition = anchor.offsetTop;
-    var scrollDistance = 0;
-    evt.preventDefault();
-    scrollDistance = anchorPosition - window.pageYOffset; 
-    for (var i = scrollDistance; i > 0; i--) {
-        setTimeout(function() {
-            window.scrollBy(0, 1);
-            console.log(window.pageYOffset);
-        }, 200);
-    }
-    //window.scrollBy(0, scrollDistance);
-}
-*/
 
 //Дискретная прокрутка
 
@@ -142,44 +131,90 @@ function onWheel(evt) {
     }, 800)
 }
 
-/*window.onscroll = function() {
-    if (currentOffset - window.pageYOffset > 0) {
-        console.log("Up!");
-        window.scrollBy(0, -window.innerHeight);
-    }
-    else if (currentOffset - window.pageYOffset < 0) {
-        console.log("Down!");
-        window.scrollBy(0, window.innerHeight);
-    }
-    currentOffset = window.pageYOffset;
-    
-    if (window.pageYOffset > 0) {
-        headerBg.style.opacity = 1;
-    }
-    if (window.pageYOffset === 0) {
-        headerBg.style.opacity = 0;
-    }
-}*/
-
-
 //Внутреннее меню
 
 function buttonScroll(evt) {
     evt.preventDefault();
     var anchor = evt.target.getAttribute("href");
     var scrollTarget = document.getElementById(anchor.slice(1));
+    var timer = 0;
     console.log(scrollTarget);
     if (scrollTarget.offsetTop > window.pageYOffset) {
-        window.scrollBy(0, scrollTarget.offsetTop - window.pageYOffset);
+        //window.scrollBy(0, scrollTarget.offsetTop - window.pageYOffset);
+        for (var i = 0; i < (scrollTarget.offsetTop - window.pageYOffset) / 10; i++) {
+           setTimeout("window.scrollBy(0, 10)", timer * 4);
+           timer++;
+        } 
     }
     else if (scrollTarget.offsetTop < window.pageYOffset) {
-        window.scrollBy(0, -(window.pageYOffset - scrollTarget.offsetTop));
+        //window.scrollBy(0, -(window.pageYOffset - scrollTarget.offsetTop));
+        for (var i = 0; i < (window.pageYOffset - scrollTarget.offsetTop) / 10; i++) {
+           setTimeout("window.scrollBy(0, -10)", timer * 4);
+           timer++;
+        } 
     }
-    else {
-        return;
-    }
+    else return;
+    
 }
 
 anchorAbout.addEventListener("click", buttonScroll, activeLink);
 anchorWork.addEventListener("click", buttonScroll, activeLink);
 anchorContact.addEventListener("click", buttonScroll, activeLink);
+scrollButton.onclick = function(evt) {
+    var timer = 0;
+    evt.preventDefault();
+    for (var i = 0; i < window.innerHeight / 10; i++) {
+           setTimeout("window.scrollBy(0, 10)", timer * 6);
+           timer++;
+        } 
+    
+}
+
+smallLogo.onclick = function(evt) {
+    var timer = 0;
+    evt.preventDefault();
+    for (var i = 0; i < window.pageYOffset / 10; i++) {
+           setTimeout("window.scrollBy(0, -10)", timer * 4);
+           timer++;
+        } 
+    
+}
+
+//Галерея
+
+var firstGalleryLink = document.querySelector(".work .work-small .pic-container.first a.image-link");
+var secondGalleryLink = document.querySelector(".work .work-small .pic-container.second a.image-link");
+var thirdGalleryLink = document.querySelector(".work .work-small .pic-container.third a.image-link");
+
+var firstGalleryOverlay = document.querySelector(".work .work-small .pic-container.first .pic-overlay");
+var secondGalleryOverlay = document.querySelector(".work .work-small .pic-container.second .pic-overlay");
+var thirdGalleryOverlay = document.querySelector(".work .work-small .pic-container.third .pic-overlay");
+
+var bigGalleryPic = document.querySelector(".work .work-main");
+
+firstGalleryLink.addEventListener("click", galleryFunc);
+secondGalleryLink.addEventListener("click", galleryFunc);
+thirdGalleryLink.addEventListener("click", galleryFunc);
+
+function galleryFunc(evt) {
+    evt.preventDefault();
+    console.log(evt.target.parentElement.parentElement.classList);
+    if (evt.target.parentElement.parentElement.classList.contains("first")) {
+        firstGalleryOverlay.classList.add("show-pic");
+        secondGalleryOverlay.classList.remove("show-pic");
+        thirdGalleryOverlay.classList.remove("show-pic");
+        bigGalleryPic.style.backgroundImage="url(img/big-bird.jpg)";
+    }
+    else if (evt.target.parentElement.parentElement.classList.contains("second")) {
+        secondGalleryOverlay.classList.add("show-pic");
+        firstGalleryOverlay.classList.remove("show-pic");
+        thirdGalleryOverlay.classList.remove("show-pic");
+        bigGalleryPic.style.backgroundImage="url(img/bug.jpg)";
+    }
+    else if (evt.target.parentElement.parentElement.classList.contains("third")) {
+        thirdGalleryOverlay.classList.add("show-pic");
+        secondGalleryOverlay.classList.remove("show-pic");
+        firstGalleryOverlay.classList.remove("show-pic");
+        bigGalleryPic.style.backgroundImage="url(img/main-bg.jpg)";
+    }
+}

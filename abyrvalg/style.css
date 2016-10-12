@@ -74,7 +74,7 @@ body.blog-body {
     width: 100%;
 }
 
-.main-header .main-nav a.active {
+.main-header a.active {
     pointer-events: none;
 }
 
@@ -268,17 +268,22 @@ body.blog-body {
 .work .gallery {
     display: table-cell;
     vertical-align: middle;
-    overflow: hidden;
+    
 }
 
 .work .gallery .work-main {
     width: 75%;
+    height: 81vh;
     float: left;
+    background-image: url(img/big-bird.jpg);
+    background-size: cover
 }
 
 .work .gallery .work-main img {
     display: block;
     width: 100%;
+    
+    
 }
 
 .work .gallery .work-small {
@@ -290,7 +295,24 @@ body.blog-body {
 
 .work .gallery .work-small .pic-container {
     position: relative;
-    margin-bottom: 4.4%;
+    2width: 100%;
+    height: 26vh;
+    margin-bottom: 1.5vh;
+}
+
+.work .gallery .work-small .pic-container.first {
+    background-image: url(img/small-bird.jpg);
+    background-size: cover;
+}
+
+.work .gallery .work-small .pic-container.second {
+    background-image: url(img/bug.jpg);
+    background-size: cover;
+}
+
+.work .gallery .work-small .pic-container.third {
+    background-image: url(img/abstract-image.jpg);
+    background-size: cover;
 }
 
 .work .gallery .work-small .pic-container:last-child {
