@@ -413,7 +413,7 @@ body.blog-body {
 .contact input[type="submit"] {
     width: 250px;
     height: 50px;
-    background-color: #181e2a;
+    background-color: black;
     color: #d4e2e3;
     border: 1px solid #d4e2e3;
 }
