@@ -190,7 +190,7 @@ var firstGalleryOverlay = document.querySelector(".work .work-small .pic-contain
 var secondGalleryOverlay = document.querySelector(".work .work-small .pic-container.second .pic-overlay");
 var thirdGalleryOverlay = document.querySelector(".work .work-small .pic-container.third .pic-overlay");
 
-var bigGalleryPic = document.querySelector(".work .work-main");
+var bigGalleryPic = document.querySelector(".work .work-main img");
 
 firstGalleryLink.addEventListener("click", galleryFunc);
 secondGalleryLink.addEventListener("click", galleryFunc);
@@ -203,18 +203,18 @@ function galleryFunc(evt) {
         firstGalleryOverlay.classList.add("show-pic");
         secondGalleryOverlay.classList.remove("show-pic");
         thirdGalleryOverlay.classList.remove("show-pic");
-        bigGalleryPic.style.backgroundImage="url(img/big-bird.jpg)";
+        bigGalleryPic.src="img/big-bird.jpg";
     }
     else if (evt.target.parentElement.parentElement.classList.contains("second")) {
         secondGalleryOverlay.classList.add("show-pic");
         firstGalleryOverlay.classList.remove("show-pic");
         thirdGalleryOverlay.classList.remove("show-pic");
-        bigGalleryPic.style.backgroundImage="url(img/bug.jpg)";
+        bigGalleryPic.src="img/bug.jpg";
     }
     else if (evt.target.parentElement.parentElement.classList.contains("third")) {
         thirdGalleryOverlay.classList.add("show-pic");
         secondGalleryOverlay.classList.remove("show-pic");
         firstGalleryOverlay.classList.remove("show-pic");
-        bigGalleryPic.style.backgroundImage="url(img/main-bg.jpg)";
+        bigGalleryPic.src="img/big-abstract-image.jpg";
     }
 }
