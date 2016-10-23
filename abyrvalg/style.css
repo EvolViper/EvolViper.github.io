@@ -205,8 +205,8 @@ body.blog-body {
 }
 
 .about .lower-block p {
-    2width: 500px;
-    width: 26%;
+    width: 500px;
+    2width: 26%;
     margin: auto;
     font-size: 23px;
     line-height: 28px;
@@ -281,8 +281,6 @@ body.blog-body {
 .work .gallery .work-main img {
     display: block;
     width: 100%;
-    
-    
 }
 
 .work .gallery .work-small {
@@ -296,21 +294,6 @@ body.blog-body {
     position: relative;
     margin-bottom: 5.8%;
 }
-
-/*.work .gallery .work-small .pic-container.first {
-    background-image: url(img/small-bird.jpg);
-    background-size: cover;
-}
-
-.work .gallery .work-small .pic-container.second {
-    background-image: url(img/bug.jpg);
-    background-size: cover;
-}
-
-.work .gallery .work-small .pic-container.third {
-    background-image: url(img/abstract-image.jpg);
-    background-size: cover;
-}*/
 
 .work .gallery .work-small .pic-container:last-child {
     margin-bottom: 0;
@@ -362,8 +345,8 @@ body.blog-body {
 
 .contact form {
     vertical-align: middle;
-    0width: 510px;
-    width: 27%;
+    width: 510px;
+    2width: 27%;
     margin: auto;
     margin-top: 30px;
     margin-bottom: 96px;
@@ -401,23 +384,23 @@ body.blog-body {
 
 .contact input[placeholder="Your Name"] {
     float: left;
-    2width: 250px;
-    width: 48%;
+    width: 250px;
+    2width: 48%;
     height: 50px;
     padding-left: 7px;
 }
 
 .contact input[placeholder="Your E-Mail"] {
     float: right;
-    2width: 250px;
-    width: 48%;
+    width: 250px;
+    2width: 48%;
     height: 50px;
     padding-left: 7px;
 }
 
 .contact input[type="submit"] {
-    2width: 250px;
-    width: 50%;
+    width: 250px;
+    2width: 50%;
     height: 50px;
     background-color: black;
     color: #d4e2e3;
