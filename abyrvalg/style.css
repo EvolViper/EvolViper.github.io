@@ -239,20 +239,20 @@ body.blog-body {
 
 .lower-block .contacts-block a[href*="github"]:after {
     width: 37px;
-    height: 36px;
-    background-position: -5px -5px;
+    height: 37px;
+    background-position: -52px -5px;
 }
 
 .lower-block .contacts-block a[href*="twitter"]:after {
     width: 42px;
     height: 36px;
-    background-position: -5px -51px;
+    background-position: -57px -52px;
 }
 
 .lower-block .contacts-block a[href*="vk.com"]:after {
-    width: 53px;
-    height: 31px;
-    background-position: -99px -5px;
+    width: 37px;
+    height: 37px;
+    background-position: -109px -52px;
 }
 
 .work {
@@ -459,20 +459,20 @@ body.blog-body {
 
 .contact .follow-us a[href*="github"]:after {
     width: 37px;
-    height: 36px;
-    background-position: -52px -5px;
+    height: 37px;
+    background-position: -5px -5px;
 }
 
 .contact .follow-us a[href*="twitter"]:after {
-    width: 41px;
+    width: 42px;
     height: 36px;
-    background-position: -57px -51px;
+    background-position: -5px -52px;
 }
 
 .contact .follow-us a[href*="vk.com"]:after {
-    width: 54px;
-    height: 31px;
-    background-position: -108px -46px;
+    width: 37px;
+    height: 37px;
+    background-position: -99px -5px;
 }
 
 .blog {
