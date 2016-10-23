@@ -205,10 +205,11 @@ body.blog-body {
 }
 
 .about .lower-block p {
-    width: 487px;
+    width: 500px;
     margin: auto;
     font-size: 23px;
     line-height: 28px;
+    letter-spacing: 1.222px;
     
 }
 
