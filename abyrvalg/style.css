@@ -205,7 +205,8 @@ body.blog-body {
 }
 
 .about .lower-block p {
-    width: 500px;
+    2width: 500px;
+    width: 26%;
     margin: auto;
     font-size: 23px;
     line-height: 28px;
@@ -361,7 +362,8 @@ body.blog-body {
 
 .contact form {
     vertical-align: middle;
-    width: 510px;
+    0width: 510px;
+    width: 27%;
     margin: auto;
     margin-top: 30px;
     margin-bottom: 96px;
@@ -399,20 +401,23 @@ body.blog-body {
 
 .contact input[placeholder="Your Name"] {
     float: left;
-    width: 250px;
+    2width: 250px;
+    width: 48%;
     height: 50px;
     padding-left: 7px;
 }
 
 .contact input[placeholder="Your E-Mail"] {
     float: right;
-    width: 250px;
+    2width: 250px;
+    width: 48%;
     height: 50px;
     padding-left: 7px;
 }
 
 .contact input[type="submit"] {
-    width: 250px;
+    2width: 250px;
+    width: 50%;
     height: 50px;
     background-color: black;
     color: #d4e2e3;
@@ -422,7 +427,8 @@ body.blog-body {
 .contact textarea {
     display: inline-block;
     resize: none;
-    width: 508px;
+    2width: 508px;
+    width: 100%;
     height: 95px;
     margin: 0;
     margin-top: 10px;
