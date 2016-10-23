@@ -209,7 +209,7 @@ body.blog-body {
     margin: auto;
     font-size: 23px;
     line-height: 28px;
-    letter-spacing: 1.222px;
+    -letter-spacing: 1.2px;
     
 }
 
@@ -263,7 +263,7 @@ body.blog-body {
     height: 100vh;
     padding-left: 5%;
     padding-right: 5%;
-    background-color: #181e2a;
+    background-color: #12171d;
 }
 
 .work .gallery {
@@ -342,7 +342,7 @@ body.blog-body {
     height: 100vh;
     -padding-top: 158px;
     -padding-bottom: 95px;
-    background-color: black;
+    background-color: #070a0c;
 }
 
 .contact .content-container {
