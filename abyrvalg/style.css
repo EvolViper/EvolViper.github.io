@@ -634,3 +634,23 @@ body.blog-body {
     top: 12px;
     left: 11.5px;
 }
+
+@media screen and (max-width: 767px) {
+    .main-header .small-logo {
+        display: none;
+    }
+    
+    .main-header .main-nav ul {
+        float: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .main-header .main-nav a {
+        margin-left: auto;
+
+        
+    }
+    
+}
