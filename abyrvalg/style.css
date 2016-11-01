@@ -641,6 +641,11 @@ body.blog-body {
         
     }
     
+    .wrapper {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    
     .main-header .small-logo {
         display: none;
     }
@@ -664,6 +669,9 @@ body.blog-body {
     
     .about .lower-block p {
         width: auto;
+        font-size: 12px;
+        padding-left: 4%;
+        padding-right: 4%;
     }
     
 }
