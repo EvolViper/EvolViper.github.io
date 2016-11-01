@@ -636,6 +636,11 @@ body.blog-body {
 }
 
 @media screen and (max-width: 767px) {
+    
+    body {
+        
+    }
+    
     .main-header .small-logo {
         display: none;
     }
@@ -651,6 +656,14 @@ body.blog-body {
         margin-left: auto;
 
         
+    }
+    
+    .contact form {
+        width: 100%;
+    }
+    
+    .about .lower-block p {
+        width: auto;
     }
     
 }
