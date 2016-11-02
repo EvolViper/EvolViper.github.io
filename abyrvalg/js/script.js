@@ -182,7 +182,7 @@ if (window.matchMedia("screen and (min-width: 1199px)").matches) {
             //window.scrollBy(0, -window.innerHeight);
         }
 
-        else if (evt.keyCode === 32) {
+        else if ((evt.keyCode === 32) && window.pageYOffset < about.offsetTop) {
             evt.preventDefault();
             smoothScroll("down");
             //window.scrollBy(0, window.innerHeight);
