@@ -90,100 +90,6 @@ function activeLink() {
     }
 }
 
-
-
-/*
-function activeLink() {
-    if (window.pageYOffset == 0) {
-        if (!isChrome) {
-            anchorAbout.classList.remove("active");
-            anchorWork.classList.remove("active");
-            anchorContact.classList.remove("active");
-            smallLogo.classList.add("active");
-            if (isEdge || isIE) {
-                anchorAbout.addEventListener("click", buttonScroll, activeLink);
-                anchorWork.addEventListener("click", buttonScroll, activeLink);
-                anchorContact.addEventListener("click", buttonScroll, activeLink);
-            }
-        } else {
-            anchorAbout.style.color="white";
-            anchorWork.style.color="white";
-            anchorContact.style.color="white";
-            anchorAbout.addEventListener("click", buttonScroll, activeLink);
-            anchorWork.addEventListener("click", buttonScroll, activeLink);
-            anchorContact.addEventListener("click", buttonScroll, activeLink);
-        }
-    }
-    else if (window.pageYOffset >= (about.offsetTop - 15) && window.pageYOffset <= (about.offsetTop + 150)) {
-        if (!isChrome) {
-            anchorAbout.classList.add("active");
-            anchorWork.classList.remove("active");
-            anchorContact.classList.remove("active");
-            smallLogo.classList.remove("active");
-            if (isEdge || isIE) {
-                anchorAbout.removeEventListener("click", buttonScroll, activeLink);
-                anchorAbout.addEventListener("click", disableDefault);
-                anchorWork.addEventListener("click", buttonScroll, activeLink);
-                anchorContact.addEventListener("click", buttonScroll, activeLink);
-            }
-        } else {
-            anchorAbout.style.color="gray";
-            anchorWork.style.color="white";
-            anchorContact.style.color="white";
-            anchorAbout.removeEventListener("click", buttonScroll, activeLink);
-            anchorAbout.addEventListener("click", disableDefault);
-            anchorWork.addEventListener("click", buttonScroll, activeLink);
-            anchorContact.addEventListener("click", buttonScroll, activeLink);
-        }
-    }
-    else if (window.pageYOffset >= (work.offsetTop - 15) && window.pageYOffset <= (work.offsetTop + 150)) {
-        if (!isChrome) {
-            anchorAbout.classList.remove("active");
-            anchorWork.classList.add("active");
-            anchorContact.classList.remove("active");
-            smallLogo.classList.remove("active"); 
-            if (isEdge || isIE) {
-                anchorWork.removeEventListener("click", buttonScroll, activeLink);
-                anchorWork.addEventListener("click", disableDefault);
-                anchorContact.addEventListener("click", buttonScroll, activeLink);
-                anchorAbout.addEventListener("click", buttonScroll, activeLink);
-            }
-        } else {
-            anchorAbout.style.color="white";
-            anchorWork.style.color="gray";
-            anchorContact.style.color="white";
-            anchorWork.removeEventListener("click", buttonScroll, activeLink);
-            anchorWork.addEventListener("click", disableDefault);
-            anchorContact.addEventListener("click", buttonScroll, activeLink);
-            anchorAbout.addEventListener("click", buttonScroll, activeLink);
-        }
-        
-    }
-    else if (window.pageYOffset >= (contact.offsetTop - 15) && window.pageYOffset <= (contact.offsetTop + 150)) {
-        if (!isChrome) {
-            anchorAbout.classList.remove("active");
-            anchorWork.classList.remove("active");
-            anchorContact.classList.add("active");
-            smallLogo.classList.remove("active");
-            if (isEdge || isIE) {
-                anchorContact.removeEventListener("click", buttonScroll, activeLink);
-                anchorContact.addEventListener("click", disableDefault);
-                anchorWork.addEventListener("click", buttonScroll, activeLink);
-                anchorAbout.addEventListener("click", buttonScroll, activeLink);
-            }
-        } else {
-            anchorAbout.style.color="white";
-            anchorWork.style.color="white";
-            anchorContact.style.color="gray";
-            anchorContact.removeEventListener("click", buttonScroll, activeLink);
-            anchorContact.addEventListener("click", disableDefault);
-            anchorWork.addEventListener("click", buttonScroll, activeLink);
-            anchorAbout.addEventListener("click", buttonScroll, activeLink);
-        }
-    }
-}
-*/
-
 //Плавный скроллинг
 
 var scrollButton = document.querySelector(".scroll-button");
@@ -225,7 +131,7 @@ if (window.matchMedia("screen and (min-width: 1199px)").matches) {
             //window.scrollBy(0, -window.innerHeight);
         }
 
-        else if ((evt.keyCode === 32) && window.pageYOffset < about.offsetTop) {
+        else if ((evt.keyCode === 32) && window.pageYOffset < contact.offsetTop) {
             evt.preventDefault();
             smoothScroll("down");
             //window.scrollBy(0, window.innerHeight);
