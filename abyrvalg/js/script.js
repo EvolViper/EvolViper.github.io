@@ -5,8 +5,18 @@
 }
   */  
 
+var chromeAndroid = navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/Chrome/i);
 
-document.body.style="overflow: hidden";
+var isChrome = (!!window.chrome && !!window.chrome.webstore) || chromeAndroid;
+var isIE = /*@cc_on!@*/false || !!document.documentMode;
+var isEdge = !isIE && !!window.StyleMedia;
+
+
+
+
+function disableDefault(evt) {
+    evt.preventDefault();
+}
 
 //Затемнение верхнего меню
 
@@ -40,31 +50,94 @@ function activeLink() {
     console.log(window.pageYOffset);
     if (window.pageYOffset == 0) {
         console.log("Main");
-        anchorAbout.classList.remove("active");
-        anchorWork.classList.remove("active");
-        anchorContact.classList.remove("active");
-        smallLogo.classList.add("active");
+        if (!isChrome) {
+            anchorAbout.classList.remove("active");
+            anchorWork.classList.remove("active");
+            anchorContact.classList.remove("active");
+            smallLogo.classList.add("active");
+            if (isEdge || isIE) {
+                anchorAbout.addEventListener("click", buttonScroll, activeLink);
+                anchorWork.addEventListener("click", buttonScroll, activeLink);
+                anchorContact.addEventListener("click", buttonScroll, activeLink);
+            }
+        } else {
+            anchorAbout.style.color="white";
+            anchorWork.style.color="white";
+            anchorContact.style.color="white";
+            anchorAbout.addEventListener("click", buttonScroll, activeLink);
+            anchorWork.addEventListener("click", buttonScroll, activeLink);
+            anchorContact.addEventListener("click", buttonScroll, activeLink);
+        }
     }
-    else if (window.pageYOffset >= (about.offsetTop - 15) && window.pageYOffset <= (about.offsetTop + 15)) {
-        console.log("About");
-        anchorAbout.classList.add("active");
-        anchorWork.classList.remove("active");
-        anchorContact.classList.remove("active");
-        smallLogo.classList.remove("active");
+    else if (window.pageYOffset >= (about.offsetTop - 15) && window.pageYOffset <= (about.offsetTop + 150)) {
+        if (!isChrome) {
+            console.log("About");
+            anchorAbout.classList.add("active");
+            anchorWork.classList.remove("active");
+            anchorContact.classList.remove("active");
+            smallLogo.classList.remove("active");
+            if (isEdge || isIE) {
+                anchorAbout.removeEventListener("click", buttonScroll, activeLink);
+                anchorAbout.addEventListener("click", disableDefault);
+                anchorWork.addEventListener("click", buttonScroll, activeLink);
+                anchorContact.addEventListener("click", buttonScroll, activeLink);
+            }
+        } else {
+            anchorAbout.style.color="gray";
+            anchorWork.style.color="white";
+            anchorContact.style.color="white";
+            anchorAbout.removeEventListener("click", buttonScroll, activeLink);
+            anchorAbout.addEventListener("click", disableDefault);
+            anchorWork.addEventListener("click", buttonScroll, activeLink);
+            anchorContact.addEventListener("click", buttonScroll, activeLink);
+        }
     }
-    else if (window.pageYOffset >= (work.offsetTop - 15) && window.pageYOffset <= (work.offsetTop + 15)) {
-        console.log("Work");
-        anchorAbout.classList.remove("active");
-        anchorWork.classList.add("active");
-        anchorContact.classList.remove("active");
-        smallLogo.classList.remove("active");
+    else if (window.pageYOffset >= (work.offsetTop - 15) && window.pageYOffset <= (work.offsetTop + 150)) {
+        if (!isChrome) {
+            console.log("Work");
+            anchorAbout.classList.remove("active");
+            anchorWork.classList.add("active");
+            anchorContact.classList.remove("active");
+            smallLogo.classList.remove("active"); 
+            if (isEdge || isIE) {
+                anchorWork.removeEventListener("click", buttonScroll, activeLink);
+                anchorWork.addEventListener("click", disableDefault);
+                anchorContact.addEventListener("click", buttonScroll, activeLink);
+                anchorAbout.addEventListener("click", buttonScroll, activeLink);
+            }
+        } else {
+            anchorAbout.style.color="white";
+            anchorWork.style.color="gray";
+            anchorContact.style.color="white";
+            anchorWork.removeEventListener("click", buttonScroll, activeLink);
+            anchorWork.addEventListener("click", disableDefault);
+            anchorContact.addEventListener("click", buttonScroll, activeLink);
+            anchorAbout.addEventListener("click", buttonScroll, activeLink);
+        }
+        
     }
-    else if (window.pageYOffset >= (contact.offsetTop - 15) && window.pageYOffset <= (contact.offsetTop + 15)) {
-        console.log("Contact");
-        anchorAbout.classList.remove("active");
-        anchorWork.classList.remove("active");
-        anchorContact.classList.add("active");
-        smallLogo.classList.remove("active");
+    else if (window.pageYOffset >= (contact.offsetTop - 15) && window.pageYOffset <= (contact.offsetTop + 150)) {
+        if (!isChrome) {
+            console.log("Contact");
+            anchorAbout.classList.remove("active");
+            anchorWork.classList.remove("active");
+            anchorContact.classList.add("active");
+            smallLogo.classList.remove("active");
+            if (isEdge || isIE) {
+                anchorContact.removeEventListener("click", buttonScroll, activeLink);
+                anchorContact.addEventListener("click", disableDefault);
+                anchorWork.addEventListener("click", buttonScroll, activeLink);
+                anchorAbout.addEventListener("click", buttonScroll, activeLink);
+            }
+        } else {
+            anchorAbout.style.color="white";
+            anchorWork.style.color="white";
+            anchorContact.style.color="gray";
+            anchorContact.removeEventListener("click", buttonScroll, activeLink);
+            anchorContact.addEventListener("click", disableDefault);
+            anchorWork.addEventListener("click", buttonScroll, activeLink);
+            anchorAbout.addEventListener("click", buttonScroll, activeLink);
+        }
     }
 }
 
@@ -93,49 +166,54 @@ function smoothScroll(direction) {
 
 //Дискретная прокрутка
 
-var currentOffset = window.pageYOffset;
+if (window.matchMedia("screen and (min-width: 1199px)").matches) {
+    var currentOffset = window.pageYOffset;
+    document.body.style.overflow = "hidden";
 
-document.onkeydown = function(evt) {
-    if (evt.keyCode === 40) {
-        evt.preventDefault();
-        smoothScroll("down");
-        //window.scrollBy(0, window.innerHeight);
+    document.onkeydown = function(evt) {
+        if (evt.keyCode === 40) {
+            evt.preventDefault();
+            smoothScroll("down");
+            //window.scrollBy(0, window.innerHeight);
+        }
+        else if (evt.keyCode === 38) {
+            evt.preventDefault();
+            smoothScroll("up");
+            //window.scrollBy(0, -window.innerHeight);
+        }
+
+        else if (evt.keyCode === 32) {
+            evt.preventDefault();
+            smoothScroll("down");
+            //window.scrollBy(0, window.innerHeight);
+        }
+
     }
-    else if (evt.keyCode === 38) {
+
+    document.addEventListener("wheel", onWheel);
+    function onWheel(evt) {
         evt.preventDefault();
-        smoothScroll("up");
-        //window.scrollBy(0, -window.innerHeight);
+        document.removeEventListener("wheel", onWheel);
+        if ("wheelDelta" in document) {
+            //if (evt.wheelDelta < 0) window.scrollBy(0, window.innerHeight);
+            //if (evt.wheelDelta > 0) window.scrollBy(0, -window.innerHeight);
+            if (evt.wheelDelta < 0) smoothScroll("down");
+            if (evt.wheelDelta > 0) smoothScroll("up");
+        }
+
+        else  {
+            //if (evt.deltaY < 0) window.scrollBy(0, -window.innerHeight);
+            //if (evt.deltaY > 0) window.scrollBy(0, window.innerHeight);
+            if (evt.deltaY < 0) smoothScroll("up");
+            if (evt.deltaY > 0) smoothScroll("down");
+        }
+        setTimeout(function() {
+            document.addEventListener("wheel", onWheel);
+        }, 800)
     }
-    
-    else if (evt.keyCode === 32) {
-        evt.preventDefault();
-        smoothScroll("down");
-        //window.scrollBy(0, window.innerHeight);
-    }
-    
 }
 
-document.addEventListener("wheel", onWheel);
-function onWheel(evt) {
-    evt.preventDefault();
-    document.removeEventListener("wheel", onWheel);
-    if ("wheelDelta" in document) {
-        //if (evt.wheelDelta < 0) window.scrollBy(0, window.innerHeight);
-        //if (evt.wheelDelta > 0) window.scrollBy(0, -window.innerHeight);
-        if (evt.wheelDelta < 0) smoothScroll("down");
-        if (evt.wheelDelta > 0) smoothScroll("up");
-    }
-    
-    else  {
-        //if (evt.deltaY < 0) window.scrollBy(0, -window.innerHeight);
-        //if (evt.deltaY > 0) window.scrollBy(0, window.innerHeight);
-        if (evt.deltaY < 0) smoothScroll("up");
-        if (evt.deltaY > 0) smoothScroll("down");
-    }
-    setTimeout(function() {
-        document.addEventListener("wheel", onWheel);
-    }, 800)
-}
+
 
 //Внутреннее меню
 
@@ -167,12 +245,32 @@ anchorAbout.addEventListener("click", buttonScroll, activeLink);
 anchorWork.addEventListener("click", buttonScroll, activeLink);
 anchorContact.addEventListener("click", buttonScroll, activeLink);
 scrollButton.onclick = function(evt) {
-    var timer = 0;
+    /*var timer = 0;
     evt.preventDefault();
     for (var i = 0; i < window.innerHeight / 10; i++) {
            setTimeout("window.scrollBy(0, 10)", timer * 6);
            timer++;
+        } */
+    evt.preventDefault();
+    var anchor = evt.target.getAttribute("href");
+    var scrollTarget = document.getElementById(anchor.slice(1));
+    var timer = 0;
+    console.log(scrollTarget);
+    if (scrollTarget.offsetTop > window.pageYOffset) {
+        //window.scrollBy(0, scrollTarget.offsetTop - window.pageYOffset);
+        for (var i = 0; i < (scrollTarget.offsetTop - window.pageYOffset) / 10; i++) {
+           setTimeout("window.scrollBy(0, 10)", timer * 4);
+           timer++;
         } 
+    }
+    else if (scrollTarget.offsetTop < window.pageYOffset) {
+        //window.scrollBy(0, -(window.pageYOffset - scrollTarget.offsetTop));
+        for (var i = 0; i < (window.pageYOffset - scrollTarget.offsetTop) / 10; i++) {
+           setTimeout("window.scrollBy(0, -10)", timer * 4);
+           timer++;
+        } 
+    }
+    else return;
     
 }
 

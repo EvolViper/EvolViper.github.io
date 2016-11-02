@@ -547,7 +547,7 @@ body.blog-body {
 .blog-footer {
     box-sizing: border-box;
     width: 51%;
-    min-width: 700px;
+    min-width: 960px;
     height: 85px;
     margin: auto;
     margin-bottom: 100px;
@@ -829,7 +829,7 @@ body.blog-body {
     
 }
 
-2@media screen and (max-height: 855px) {
+/*2@media screen and (max-height: 855px) {
      .about .upper-block img {
         width: 10%;
     }
@@ -848,7 +848,7 @@ body.blog-body {
     .about .upper-block h1 {
         
     }
-}
+}*/
 
 @media screen and (orientation: landscape) {
     * {

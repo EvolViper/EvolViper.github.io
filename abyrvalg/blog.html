@@ -82,6 +82,13 @@
                 <a href="#" class="page-button next">Next page</a>
                 <a href="#" class="page-button up">Up</a>
             </div>
+            <script>
+                if ((!!window.chrome && !!window.chrome.webstore) || (navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/Chrome/i))) {
+                    var blogButton = document.querySelector("a.active");
+                    blogButton.classList.remove("active");
+                    blogButton.style.color="gray";
+                }
+            </script>
         </footer>
     </body>
 </html>
