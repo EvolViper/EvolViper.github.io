@@ -64,14 +64,13 @@ body.blog-body {
     left: 0;
     bottom: -5px;
     background-color: white;
+    transition: width 0.2s ease-out;
     opacity: 0;
-    
 }
 
 .main-header .main-nav a:hover::after, .main-header .main-nav a.active::after {
-    transition: width 0.2s ease-out;
-    opacity: 1;
     width: 100%;
+    opacity: 1;
 }
 
 .main-header a.active {
@@ -174,8 +173,6 @@ body.blog-body {
     width: 100%;
     height: 50vh;
     background-color: #242d39;
-    -padding-top: 105px;
-    -padding-bottom: 45px;
 }
 
 .logo-block {
@@ -201,7 +198,6 @@ body.blog-body {
 .about .lower-block {
     height: 50vh;
     padding-top: 44px;
-    -padding-bottom: 136px;
 }
 
 .about .lower-block p {
@@ -210,8 +206,6 @@ body.blog-body {
     margin: auto;
     font-size: 23px;
     line-height: 28px;
-    -letter-spacing: 1.2px;
-    
 }
 
 .lower-block .contacts-block {
@@ -295,8 +289,6 @@ body.blog-body {
     margin-bottom: 5.8%;
 }
 
-
-
 .work .gallery .work-small .pic-overlay {
     position: absolute;
     width: 100%;
@@ -322,8 +314,6 @@ body.blog-body {
     display: table;
     width: 100%;
     height: 100vh;
-    -padding-top: 158px;
-    -padding-bottom: 95px;
     background-color: #070a0c;
 }
 
@@ -382,7 +372,6 @@ body.blog-body {
 .contact input[placeholder="Your Name"] {
     float: left;
     width: 250px;
-    2width: 48%;
     height: 50px;
     padding-left: 7px;
 }
@@ -390,14 +379,12 @@ body.blog-body {
 .contact input[placeholder="Your E-Mail"] {
     float: right;
     width: 250px;
-    2width: 48%;
     height: 50px;
     padding-left: 7px;
 }
 
 .contact input[type="submit"] {
     width: 250px;
-    2width: 50%;
     height: 50px;
     padding-bottom: 6px;
     background-color: #070a0c;
@@ -508,7 +495,6 @@ body.blog-body {
     height: 2px;
     background-color: #d98080;
 }
-
 
 .blog .blog-post h1 {
     padding: 0;
@@ -829,37 +815,9 @@ body.blog-body {
     
 }
 
-/*2@media screen and (max-height: 855px) {
-     .about .upper-block img {
-        width: 10%;
-    }
-    
-    .about .upper-block h1 {
-        font-size: 38px;
-    }
-    
-}
-
-@media screen and (max-height: 768px) {
-     .about .upper-block img {
-        padding-top: 50px;
-    }
-    
-    .about .upper-block h1 {
-        
-    }
-}*/
-
-@media screen and (orientation: landscape) {
-    * {
-        
-    }
-}
 
 @media screen and (min-width: 1200px) {
     .work .gallery .work-small .pic-container:last-child {
         margin-bottom: 0;
     }
-    
-    
 }
